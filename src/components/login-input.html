@@ -18,5 +18,22 @@
   </head>
   <body>
     <h1>login-input 컴포넌트 생성을 위한 페이지</h1>
+
+    <div class="input-component inline-flex flex-col items-start gap-1">
+      <label for="keyword" class="sr-only">검색어</label>
+      <input
+        class="input-search rounded-sm bg-[#212121] text-[#565656] text-xs pt-0 pr-5 pb-0 pl-4 w-[18rem] h-[2.875rem]"
+        type="search"
+        id="keyword"
+        name="keyword"
+        required
+        placeholder="placeholder"
+      />
+      <p class="hint text-[#6B6B6B] text-xs">hintplace</p>
+    </div>
+     <button type="submit" class="button-search">
+      <span class="sr-only">검색</span>
+     </button>
+    </div>
   </body>
 </html>
