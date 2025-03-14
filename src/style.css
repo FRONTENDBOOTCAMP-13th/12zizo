@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
   --font-sans: "Pretendard Variable", sans-serif;
-
 }
