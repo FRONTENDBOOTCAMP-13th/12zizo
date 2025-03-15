@@ -2,4 +2,15 @@
 
 @theme {
   --font-sans: "Pretendard Variable", sans-serif;
+
+  /* breakpoints 설정 */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 20rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-xl: 120rem;
+
+  /* 색상 변수 */
+  --brand-blue-1: #4763FF;
+  --brand-blue-2: #3856FF;
+  --brand-blue-3: #293CA9;
 }
