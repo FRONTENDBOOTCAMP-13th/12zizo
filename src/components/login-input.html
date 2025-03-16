@@ -22,9 +22,11 @@
     <div class="input-component gap-1">
       <label for="keyword" class="sr-only">검색어</label>
       <input
-        class="input-search rounded-sm bg-[#212121] text-[#565656] 
-        text-xs md:text-base lg:text-2xl text-left pt-0 pr-5 pb-0 pl-4 
-        w-[18rem] h-[2.875rem] md:w-[26rem] md:h-[3.375rem] lg:w-[45.75rem] lg:h-[6rem]"
+        class="input-search   
+        sm:w-[18rem] sm:h-[2.875rem] md:w-[26rem] md:h-[3.375rem] xl:w-[45.75rem] xl:h-[6rem]
+        pt-0 pr-5 pb-0 pl-4
+       bg-[#212121] rounded-sm
+        sm:text-sm md:text-base xl:text-2xl text-[#565656] text-left"
         type="search"
         id="keyword"
         name="keyword"
@@ -32,7 +34,11 @@
         placeholder="placeholder"
         aria-describedby="hint-keyword"
       />
-      <p class="hint text-[#6B6B6B] text-xs md:text-base lg:text-2xl text-left w-full">hintplace</p>
+      <p class="hint-keyword 
+       sm:text-xs md:text-base xl:text-2xl
+       text-left w-full
+       text-[#6B6B6B]"
+       >hintplace</p>
     </div>
   </body>
 </html>
