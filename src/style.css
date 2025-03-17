@@ -25,6 +25,22 @@
   --gray-500: #6B6B6B;
   --gray-600: #565656;
   --gray-700: #404040;
-  --gray-800: #2B2B2B;
+  --gray-800: #2B2B2B; 
   --gray-900: #151515;
+  --scrollimage-width-small:11.333rem;
+  --scrollimage-height-small:6.375rem;
+  --scrollimage-width-large:29.375rem;
+  --scrollimage-height-large:16.524rem;
+  --animate-scrollfast: scroll 10s linear infinite;
+  --animate-scrollslow: scroll 20s linear infinite;
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0); /* 초기 위치 */
+    }
+    to {
+      transform: translateX(calc(-181.33px * 5)); /* 왼쪽으로 이동 */
+    }
+  }
 }
+
