@@ -113,9 +113,16 @@
             </svg>
           </a>
           <!-- tool-tip 창 -->
-          <div class="absolute right-0 mt-2 w-[9.375rem] md:w-[11.25rem] xl:w-[13.75rem] bg-(--gray-800) text-white text-sm text-center p-2 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div class="mt-3 xl:mt-4 grid min-sm:grid-cols-[40px_1fr] md:grid grid-cols-[50px_1fr] grid-rows-2 place-content-center ">
-              <svg class="col-span-1 row-span-2 md:mt-1 ml-2 xl:hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="absolute right-0 mt-2 p-2
+                      w-[9.375rem] md:w-[11.25rem] xl:w-[13.75rem]
+                    bg-(--gray-800) text-white 
+                      text-sm text-center rounded-sm 
+                      opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="mt-3 xl:mt-4 
+                        grid min-sm:grid-cols-[40px_1fr] md:grid grid-cols-[50px_1fr] 
+                        grid-rows-2 place-content-center ">
+              <svg class="xl:hidden md:mt-1 ml-2 
+                          col-span-1 row-span-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_80_5335)">
                 <path d="M22.4516 0H1.54839C0.693236 0 0 0.693236 0 1.54839V22.4516C0 23.3068 0.693236 24 1.54839 24H22.4516C23.3068 24 24 23.3068 24 22.4516V1.54839C24 0.693236 23.3068 0 22.4516 0Z" fill="black"/>
                 <path d="M1.93549 8.51663V3.87147C1.93549 3.65769 2.10879 3.48438 2.32258 3.48438H12.3871C12.6009 3.48438 12.7742 3.65769 12.7742 3.87147V6.7747L14.4071 3.69035C14.4742 3.56363 14.6058 3.48438 14.7492 3.48438H22.2926C22.5594 3.48438 22.7462 3.74795 22.6578 3.99968L16.5425 21.419C16.488 21.5741 16.3416 21.6779 16.1772 21.6779H5.80645C5.59266 21.6779 5.41936 21.5046 5.41936 21.2908V9.29083C5.41936 9.07703 5.24605 8.90373 5.03226 8.90373H2.32258C2.1088 8.90373 1.93549 8.73043 1.93549 8.51663Z" fill="#4763FF"/>
@@ -132,7 +139,8 @@
                 </clipPath>
                 </defs>
               </svg>
-              <svg class="hidden xl:block col-span-1 row-span-2 ml-2" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="hidden xl:block ml-2
+                          col-span-1 row-span-2" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_63_3591)">
                 <path d="M37.4194 0H2.58065C1.15539 0 0 1.15539 0 2.58065V37.4194C0 38.8446 1.15539 40 2.58065 40H37.4194C38.8446 40 40 38.8446 40 37.4194V2.58065C40 1.15539 38.8446 0 37.4194 0Z" fill="black"/>
                 <path d="M3.2258 14.1937V6.4518C3.2258 6.09549 3.51464 5.80664 3.87096 5.80664H20.6452C21.0015 5.80664 21.2903 6.09549 21.2903 6.4518V11.2905L24.0118 6.14994C24.1236 5.93874 24.343 5.80664 24.582 5.80664H37.1543C37.599 5.80664 37.9103 6.24594 37.763 6.66548L27.5708 35.6977C27.4801 35.9563 27.236 36.1292 26.9621 36.1292H9.67741C9.32109 36.1292 9.03225 35.8404 9.03225 35.4841V15.4841C9.03225 15.1277 8.74341 14.8389 8.38709 14.8389H3.87096C3.51465 14.8389 3.2258 14.5501 3.2258 14.1937Z" fill="#4763FF"/>
@@ -149,17 +157,25 @@
                 </clipPath>
                 </defs>
               </svg>
-              <span class="rows-start-1 col-start-2 justify-self-start font-bold text-xs md:text-sm xl:text-lg xl:ml-4">사용자 닉네임</span>
-              <span class="rows start-2 col-start-2 justify-self-start text-xs text-(--gray-400) xl:ml-4">프로필 전환 ></span>
+              <span class="rows-start-1 col-start-2 justify-self-start 
+                           font-bold text-xs md:text-sm xl:text-lg 
+                           xl:ml-4">사용자 닉네임</span>
+              <span class="rows start-2 col-start-2 justify-self-start
+                           text-xs text-(--gray-400) 
+                           xl:ml-4 hover:text-white">프로필 전환 ></span>
             </div>
             <hr class="mt-4 border border-(--gray-700)"/>
-            <ul class="space-y-2 text-left ml-2 mt-2 text-xs md:text-sm xl:text-lg text-(--gray-400)">
+            <ul class="space-y-2 ml-2 mt-2 
+                      text-left text-xs md:text-sm xl:text-lg
+                    text-(--gray-400)">
               <li class="hover:text-white">MY</li>
               <li class="hover:text-white">이용권 구독</li>
               <li class="hover:text-white">쿠폰 등록</li>
               <li class="hover:text-white"> 고객센터</li>
             </ul>
-            <button class="block mt-2 ml-2 text-left text-xs md:text-sm xl:text-lg text-(--gray-400) hover:text-white">로그아웃</button>
+            <button class="block mt-2 ml-2 
+                          text-left text-xs md:text-sm xl:text-lg
+                        text-(--gray-400) hover:text-white">로그아웃</button>
           </div>
         </div>
       </div>
