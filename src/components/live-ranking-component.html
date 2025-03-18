@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UI 프로젝트 - CSS</title>
+    <link rel="icon" href="/vite.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- <script type="module" src="/src/main.js"></script> -->
+  </head>
+  <body class="text-white m-4
+  bg-[var(--brand-dark-bg-1)]">
+    <h1 class="text-2xl">실시간 인기 LIVE 컴포넌트 생성을 위한 페이지</h1>
+
+    <div class="live-free mt-4">
+      <h2>실시간 라이브 무료 컨텐츠 컴포넌트</h2>
+      <li class="w-full aspect-video">
+        <div class="relative w-full">
+          <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+          <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+            xl:w-10">
+            <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+          </div>
+        </div>
+        <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+          <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+          <div class="ml-3 xl:ml-5">
+            <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+            <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+            <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+          </div>
+        </div>
+      </li>
+    </div>
+
+    <h2>이미지 리스트</h2>
+    <div class="">
+      <ul class="grid sm:grid-cols-[repeat(4,1fr)] md:grid-cols-[repeat(5,1fr)] xl:grid-cols-[repeat(7,1fr)] gap-4">
+        <li class="w-full aspect-video">
+          <div class="relative w-full">
+            <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+            <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+              xl:w-10">
+              <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+            <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+            <div class="ml-3 xl:ml-5">
+              <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+              <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+              <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+            </div>
+          </div>
+        </li>
+        <li class="w-full aspect-video">
+          <div class="relative w-full">
+            <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+            <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+              xl:w-10">
+              <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+            <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+            <div class="ml-3 xl:ml-5">
+              <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+              <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+              <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+            </div>
+          </div>
+        </li>
+        <li class="w-full aspect-video">
+          <div class="relative w-full">
+            <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+            <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+              xl:w-10">
+              <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+            <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+            <div class="ml-3 xl:ml-5">
+              <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+              <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+              <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+            </div>
+          </div>
+        </li>
+        <li class="w-full aspect-video">
+          <div class="relative w-full">
+            <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+            <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+              xl:w-10">
+              <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+            <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+            <div class="ml-3 xl:ml-5">
+              <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+              <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+              <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+            </div>
+          </div>
+        </li>
+        <li class="w-full aspect-video">
+          <div class="relative w-full">
+            <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+            <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+              xl:w-10">
+              <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+            <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+            <div class="ml-3 xl:ml-5">
+              <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+              <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+              <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+            </div>
+          </div>
+        </li>
+        <li class="w-full aspect-video">
+          <div class="relative w-full">
+            <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+            <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+              xl:w-10">
+              <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+            <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+            <div class="ml-3 xl:ml-5">
+              <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+              <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+              <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+            </div>
+          </div>
+        </li>
+        <li class="w-full aspect-video">
+          <div class="relative w-full">
+            <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+            <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+              xl:w-10">
+              <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+            <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+            <div class="ml-3 xl:ml-5">
+              <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+              <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+              <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+            </div>
+          </div>
+        </li>
+        <li class="w-full aspect-video">
+          <div class="relative w-full">
+            <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+            <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+              xl:w-10">
+              <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+            <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+            <div class="ml-3 xl:ml-5">
+              <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+              <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+              <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+            </div>
+          </div>
+        </li>
+        <li class="w-full aspect-video">
+          <div class="relative w-full">
+            <img class="w-full object-cover aspect-video" src="/src/assets/chef&my_fridge_1024.webp" alt="" />
+            <div class="absolute sm:top-1 sm:left-1 md:top-2 md:left-2 xl:top-4 xl:left-4 sm:w-6 md:w-7
+              xl:w-10">
+              <svg class="w-full" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#label_free_svg__clip0_10140_56317)"><path fill="#000" fill-opacity="0.8" d="M0 0h54v36H0z"></path><path d="M25.12 8.438v9.306H8.58V8.438H25.12zM11.541 15.05h10.617v-3.918H11.542v3.918zm14.512 5.098v2.717H18.42v4.698H15.28v-4.698H7.646v-2.716h18.408zM45.361 17.722v2.56H28.623V13.07H42.2v-2.093H28.623V8.437H45.16v7.103H31.583v2.182h13.778zm.735 6.211v2.694H27.688v-2.694h3.85V20.95H34.5v2.983h4.808V20.95h2.938v2.983h3.85z" fill="#00E471"></path></g><defs><clipPath id="label_free_svg__clip0_10140_56317"><rect width="54" height="36" rx="4.5" fill="#fff"></rect></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="sm:h-[1.8687rem] xl:h-[4rem] flex my-2 xl:my-3">
+            <svg class="h-full mt-2 xl:mt-3" viewBox="0 0 59 87" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#ranking_1_svg__clip0_1448_25964)"><path d="M39.228 2.719c-2.356 6.128-5.723 11.812-17.646 12.878l-1.28 8.527H30.72l-9.43 62.881h14.816L48.746 2.72h-9.518z" fill="#fff"></path></g><defs><clipPath id="ranking_1_svg__clip0_1448_25964"><path fill="#fff" d="M0 0h58.453v87H0z"></path></clipPath></defs></svg>
+            <div class="ml-3 xl:ml-5">
+              <p class="text-xs xl:text-xl text-gray-200 font-semibold">Title</p>
+              <p class="text-xs xl:text-xl text-gray-300">Sub Title</p>
+              <p class="text-xs xl:text-xl text-gray-500">Viewer</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+  </html>
