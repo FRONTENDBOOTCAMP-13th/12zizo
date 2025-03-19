@@ -16,29 +16,100 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <!-- <script type="module" src="/src/main.js"></script> -->
   </head>
-  <body>
-    <h1>login-input 컴포넌트 생성을 위한 페이지</h1>
+  <body class="p-10 bg-black">
+    <h1 class="pb-10 text-white">login-input 컴포넌트 생성을 위한 페이지</h1>
 
-    <div class="input-component gap-1">
+    <div class="input-component">
       <label for="keyword" class="sr-only">검색어</label>
       <input
         class="input-search   
         sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
-        pt-0 pr-5 pb-0 pl-4
-       bg-gray-900 rounded-sm
-        sm:text-sm md:text-base xl:text-2xl text-gray-600 text-left"
+        pt-0 pr-5 pb-0 pl-4 mb-1
+        bg-[var(--brand-dark-bg-2)] rounded-sm
+        text-xs md:text-base xl:text-xl text-white
+        border-transparent
+        focus:ring-[var(--gray-100)] hover:border-[var(--gray-100)]
+        placeholder-[var(--gray-600)]"
         type="search"
         id="keyword"
         name="keyword"
         required
-        placeholder="placeholder"
+        placeholder="Placeholder"
         aria-describedby="hint-keyword"
       />
-      <p class="hint-keyword 
-       sm:text-xs md:text-base xl:text-2xl
-       w-full
-       text-gray-500"
-       >hintplace</p>
+      <p class="hint 
+       text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
+       id="hint-keyword"
+       >Hint Place</p>
     </div>
+    <!-- 비밀번호 -->
+    <div class="input-password-component ">
+      <label for="password" class="sr-only">비밀번호</label>
+      <input
+        class="input-password
+        sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
+        pt-0 pr-5 pb-0 pl-4 mb-1
+        bg-[var(--brand-dark-bg-2)] rounded-sm
+        text-xs md:text-base xl:text-xl text-white
+        border-transparent
+        focus:ring-[var(--gray-100)] hover:border-[var(--gray-100)]
+        placeholder-[var(--gray-600)]"
+        type="password"
+        id="password"
+        name="password"
+        required
+        placeholder="비밀번호"
+        aria-describedby="hint-keyword"
+        />
+      <button 
+        type="button" 
+        class="btn-password-toggle"
+        aria-label="비밀번호 표시/숨기기">
+        <svg class="text-[var(--gray-300)]"
+        xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+          <path d="M15.1183 4.63281L12.6108 7.14031C12.765 7.75792 12.7568 8.40493 12.5869 9.0184C12.417 9.63187 12.0912 10.1909 11.6412 10.6412C11.1912 11.0914 10.6322 11.4175 10.0188 11.5878C9.40546 11.7581 8.75853 11.7667 8.14084 11.6128L6.4375 13.3161C7.26969 13.5625 8.1329 13.6879 9.00077 13.6886C10.8443 13.6428 12.6393 13.0873 14.1864 12.0837C15.7336 11.0801 16.9725 9.66758 17.7658 8.00281C17.1092 6.71908 16.2101 5.57468 15.1183 4.63281Z" fill="currentColor"/>
+          <path d="M15.6328 0.519531L12.9353 3.2162C11.7082 2.62404 10.3636 2.31532 9.00112 2.31286C7.15734 2.35869 5.3623 2.9143 3.81501 3.91807C2.26773 4.92184 1.02874 6.33455 0.235352 7.99953C1.09674 9.694 2.38706 11.1332 3.97782 12.1737L0.672007 15.4795H2.3695L17.3295 0.519531H15.6328ZM9.00112 6.12453C8.68203 6.12252 8.36781 6.20248 8.08849 6.35676C7.80917 6.51104 7.57417 6.73446 7.40596 7.00563C7.23776 7.27679 7.14202 7.5866 7.1279 7.90538C7.11378 8.22416 7.18178 8.54123 7.32535 8.8262L5.99198 10.1595C5.53059 9.53411 5.28122 8.77756 5.28031 8.00037C5.28031 7.01376 5.67226 6.06756 6.36989 5.36993C7.06753 4.67229 8.0137 4.28036 9.00031 4.28036C9.77723 4.28139 10.5334 4.53075 11.1586 4.99203L9.8253 6.32536C9.56984 6.19549 9.28769 6.12674 9.00112 6.12453Z" fill="currentColor"/>
+        </svg>
+      </button>
+      <p class="hint 
+       text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
+       id="hint-keyword"
+       >영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15 자리</p>
+    </div>
+    <!-- 아이디 -->
+    <div class="input-id-component ">
+      <label for="username" class="sr-only">아이디</label>
+      <input
+        class="input-username peer
+        sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
+        pt-0 pr-5 pb-0 pl-4 mb-1
+        bg-[var(--brand-dark-bg-2)] rounded-sm
+        text-xs md:text-base xl:text-xl text-white
+        border-transparent
+        focus:ring-[var(--gray-100)] hover:border-(--gray-100)
+        placeholder-[var(--gray-600)]"
+        type="text"
+        id="username"
+        name="username"
+        required
+        placeholder="아이디"
+        pattern="^[a-z]{6,12}$|^[a-z0-9]{6,12}$" 
+        aria-describedby="hint-keyword error-username"
+        />
+      <!-- 힌트 메세지 -->
+      <p class="hint 
+       text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
+       id="hint-keyword"
+       >영문 소문자 또는 영문 소문자, 숫자 조합 6~12 자리
+      </p>
+      <!-- 오류 메세지 -->
+      <p class="message
+      peer-invalid:text-red-500 
+       text-xs md:text-base xl:text-xl"
+       id="error-username" aria-live="polite"
+       >유효한 아이디를 입력해주세요.
+      </p>
+    </div>
+    
   </body>
 </html>
