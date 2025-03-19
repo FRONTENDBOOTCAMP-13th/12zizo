@@ -7,6 +7,7 @@
   --breakpoint-*: initial;
   --breakpoint-sm: 20rem;
   --breakpoint-md: 48rem;
+  --breakpoint-lg: 80rem;
   --breakpoint-xl: 120rem;
 
   /* 색상 변수 */
