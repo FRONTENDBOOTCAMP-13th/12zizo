@@ -63,18 +63,19 @@
               pattern="^[a-z]{6,12}$|^[a-z0-9]{6,12}$"
               aria-describedby="hint-keyword error-username"
               />
-            <!-- 힌트 메세지 -->
-            <p class="hint
-            text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
-            id="hint-keyword"
-            >영문 소문자 또는 영문 소문자, 숫자 조합 6~12 자리
-            </p>
+              <p class="message
+              peer-invalid:text-red-500
+                peer-placeholder-shown:hidden
+                text-xs md:text-base xl:text-xl"
+                id="error-username" aria-live="polite"
+               >유효한 아이디를 입력해주세요.
+              </p>
           </div>
           <!-- 비밀번호 -->
           <div class="input-password-component mt-2">
             <label for="password" class="sr-only">비밀번호</label>
             <input
-              class="input-password
+              class="input-password peer
               sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
               pt-0 pr-5 pb-0 pl-4 mb-1
               bg-[var(--brand-dark-bg-2)] rounded-sm
@@ -85,19 +86,24 @@
               type="password"
               id="password"
               name="password"
+              pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,15}"
               required
               placeholder="비밀번호"
               aria-describedby="hint-keyword"
               />
-            <p class="hint
-            text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
-            id="hint-keyword"
-            >영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15 자리</p>
+              <p class="message
+              peer-invalid:text-red-500
+                peer-placeholder-shown:hidden
+                text-xs md:text-base xl:text-xl"
+               id="error-password" aria-live="polite"
+               >유효한 아이디를 입력해주세요.
+              </p>
           </div>
           <div class="inline-flex relative items-center
             mt-2 md:mt-3 xl:mt-4">
             <label class="contents" for="checkbox">
-              <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox" id="checkbox" required />
+              <input class="absolute top-0 left-0 m-0 appearance-none peer
+              w-4 h-4" type="checkbox" name="checkbox" id="checkbox" required />
               <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" width="16" height="16" rx="8" fill="#565656"/>
                 <g clip-path="url(#clip0_98_5164)">
@@ -128,13 +134,13 @@
       ">
         <button class="w-[10.625rem] 
         text-sm md:text-base xl:text-xl text-gray-300 hover:text-white"
-        href="/">아이디 찾기</button>
+        ><a href="/src/pages/id-search.html">아이디 찾기</a></button>
         <button class="w-[10.625rem] 
         text-sm md:text-base xl:text-xl text-gray-300 hover:text-white"
-        href="/">비밀번호 찾기</button>
+        href="/"><a href="/src/pages/password-search.html">비밀번호 찾기</a></button>
         <button class="w-[10.625rem] 
         text-sm md:text-base xl:text-xl text-gray-300 hover:text-white"
-        href="/">회원가입</button>
+        href="/"><a href="/src/pages/join-in-page.html">회원가입</a></button>
       </div>
     </div>
     <hr class="border-t border-gray-500 bor" />
