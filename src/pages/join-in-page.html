@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>비밀번호 찾기 페이지</title>
+    <title>회원가입</title>
     <link rel="icon" href="/vite.svg" />
-    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous"/>
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -13,9 +18,10 @@
   </head>
   <body class="bg-black">
     <div class="h-[3.125rem] md:h-[4.375rem] xl:h-[6.25rem] bg-gradient-to-b from-black/100 to-black/75">
-      <div class="relative top-4 left-4 md:top-5.5 md:left-10 xl:top-8">
-        <a href="https://www.tving.com/">
-          <svg class="w-[2.875rem] h-[1rem] md:w-[4.8125rem] md:h-[1.5rem] xl:w-[8.25rem] xl:h-[2.125rem]" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div>
+        <div class="relative top-4 left-4 md:top-5.5 md:left-10 xl:top-8">
+          <a href="https://www.tving.com/">
+            <svg class="w-[2.875rem] h-[1rem] md:w-[4.8125rem] md:h-[1.5rem] xl:w-[8.25rem] xl:h-[2.125rem]" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <mask id="mask0_3300_276" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="46" height="12">
               <path d="M0 2.24219H45.8296V13.759H0V2.24219Z" fill="white"/>
               </mask>
@@ -26,25 +32,23 @@
               <path d="M9.03639 2.52148H0V5.69184H2.71818V13.3526H6.31298V5.69184H9.03377L9.03639 2.52148Z" fill="white"/>
               <path d="M13.2072 13.4721L15.4842 6.22123C15.5054 6.15238 15.5499 6.09358 15.6098 6.05553C15.6696 6.01747 15.7408 6.00267 15.8104 6.01383C15.88 6.02498 15.9434 6.06134 15.989 6.1163C16.0347 6.17126 16.0596 6.24119 16.0592 6.31337L16.0592 13.4727L19.5124 13.4727L19.5124 2.64319L12.983 2.64319L9.4091 13.4721L13.2072 13.4721Z" fill="white"/>
               </g>
-          </svg>
-        </a>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="flex flex-col items-center 
-                mt-7 mb-[3.25rem] 
-                md:mb-[4.375rem] 
-                xl:mb-[8.75rem] ">
-      <h2 class="text-base md:text-[1.7769rem] xl:text-[2.3686rem] 
-                 font-bold text-white">비밀번호 찾기</h2>
-      <p class="text-xs md:text-[1rem] xl:text-[1.7769rem] text-(--gray-400)
-                mt-7 mb-4 xl:mt-15 xl:mb-6 
-                w-[18rem] md:w-[26rem] xl:w-[45.75rem] h-[2.875rem] md:h-[3.375rem] xl:h-[6rem] 
-                flex items-center justify-center">아이디 확인 후 등록된 이메일 주소로 비밀번호 재설정을 위한
-        인증 메일이  발송됩니다. 이메일을 확인하여 12시간 이내에 비밀번호 재설정을 완료해주세요.</p>
-      <form action="/" method="post" class="input-com ponent">
-        <!-- 아이디 -->
+    <div class="flex flex-col items-center
+       mt-7 mb-[3.25rem] md:mb-[4.375rem] xl:mb-[8.75rem] ">
+      <h2 class="text-base md:text-[1.8125rems] xl:text-[2.375rem] font-bold text-white
+      mb-7">티빙 회원가입</h2>
+      <div class="w-72 md:w-[26rem] xl:w-[45.75rem]
+      mb-6
+      text-white">
+        <p class="text-xs md:text-base xl:text-[1.75rem] text-gray-400 text-center">가입 시 등록한 이메일을 입력해주세요.</p>
+      </div>
+      <form action="/" method="post" class="input-component">
         <fieldset>
-          <div class="input-id-component ">
+          <div class="mb-4">
             <label for="username" class="sr-only">아이디</label>
             <input
               class="input-username peer
@@ -60,50 +64,263 @@
               name="username"
               required
               placeholder="아이디"
-              pattern="^[a-z]{6,12}$|^[a-z0-9]{6,12}$"
+              pattern="^[a-z]{6,12}$|^[a-z0-9]{6,12}$" 
               aria-describedby="hint-keyword error-username"
               />
             <!-- 힌트 메세지 -->
-            <p class="hint
-            text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
-            id="hint-keyword"
-            >영문 소문자 또는 영문 소문자, 숫자 조합 6~12 자리
+            <p class="hint 
+             text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
+             id="hint-keyword"
+             >영문 소문자 또는 영문 소문자, 숫자 조합 6~12 자리
             </p>
           </div>
-          
-          <div class="inline-flex relative items-center mt-2 md:mt-3 xl:mt-4">
+          <div class="input-password-component mb-1">
+            <label for="password" class="sr-only">비밀번호</label>
+            <input
+              class="input-password
+              sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
+              pt-0 pr-5 pb-0 pl-4 mb-1
+              bg-[var(--brand-dark-bg-2)] rounded-sm
+              text-xs md:text-base xl:text-xl text-white
+              border-transparent
+              focus:ring-[var(--gray-100)] hover:border-[var(--gray-100)]
+              placeholder-[var(--gray-600)]"
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="비밀번호"
+              aria-describedby="hint-keyword"
+              />
+          </div>
+          <div class="input-password-component mb-4">
+            <label for="password" class="sr-only">비밀번호</label>
+            <input
+              class="input-password
+              sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
+              pt-0 pr-5 pb-0 pl-4 mb-1
+              bg-[var(--brand-dark-bg-2)] rounded-sm
+              text-xs md:text-base xl:text-xl text-white
+              border-transparent
+              focus:ring-[var(--gray-100)] hover:border-[var(--gray-100)]
+              placeholder-[var(--gray-600)]"
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="비밀번호"
+              aria-describedby="hint-keyword"
+              />
+            <p class="hint 
+             text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
+             id="hint-keyword"
+             >영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15 자리</p>
+          </div>
+          <div class="input-email-component ">
+            <label for="username" class="sr-only">아이디</label>
+            <input
+              class="input-username peer
+              sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
+              pt-0 pr-5 pb-0 pl-4 mb-1
+              bg-[var(--brand-dark-bg-2)] rounded-sm
+              text-xs md:text-base xl:text-xl text-white
+              border-transparent
+              focus:ring-[var(--gray-100)] hover:border-(--gray-100)
+              placeholder-[var(--gray-600)]"
+              type="email"
+              id="useremail"
+              name="useremail"
+              required
+              placeholder="이메일"
+              aria-describedby="hint-keyword error-username"
+              />
+          </div>
+          <div class="w-72 md:w-[26rem] xl:w-[45.75rem]
+            mb-4 md:mb-[1.3125rem] xl:mb-8
+          text-gray-500">
+            <div class="inline-flex relative items-center
+              my-4 xl:my-7">
+              <label class="contents" for="checkbox">
+                <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox" id="checkbox" required />
+                <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="16" height="16" rx="8" fill="#565656"/>
+                  <g clip-path="url(#clip0_98_5164)">
+                  <path d="M4.39648 7.71429L7.29846 10.6169L12.6016 5.31445" stroke="#8D8D8D" stroke-width="1.23077"/>
+                  </g> <defs> <clipPath id="clip0_98_5164"> <rect width="12.3077" height="12.3077" fill="white" transform="translate(2.34668 1.8457)"/> </clipPath> </defs>
+                </svg>
+                <svg class="hidden peer-checked:block" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="16" height="16" rx="8" fill="var(--brand-blue-2)"/>
+                  <g clip-path="url(#clip0_98_5164)">
+                  <path d="M4.39648 7.71429L7.29846 10.6169L12.6016 5.31445" stroke="white" stroke-width="1.23077"/>
+                  </g> <defs> <clipPath id="clip0_98_5164"> <rect width="12.3077" height="12.3077" fill="white" transform="translate(2.34668 1.8457)"/> </clipPath> </defs>
+                </svg>
+                <span class="text-xs xl:text-xl text-gray-500
+                ml-1">모두 동의합니다.</span>
+              </label>
+            </div>
+            <br />
+            <div class="inline-flex relative items-center
+              ">
+              <label class="contents" for="checkbox_1">
+                <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox_1" id="checkbox_1" required />
+                <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="#6B6B6B" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <svg class="hidden peer-checked:block" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="var(--brand-blue-2)" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <span class="text-xs xl:text-xl text-gray-500
+                ml-1">만 14세 이상입니다.</span>
+              </label>
+            </div>
+            <br />
+            <div class="inline-flex relative items-center
+              mt-2 xl:mt-4">
+              <label class="contents" for="checkbox_2">
+                <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox_2" id="checkbox_2" required />
+                <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="#6B6B6B" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <svg class="hidden peer-checked:block" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="var(--brand-blue-2)" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <span class="text-xs xl:text-xl text-gray-500
+                ml-1">[필수] 서비스 이용약관 동의</span>
+              </label>
+            </div>
+            <br />
+            <div class="inline-flex relative items-center
+              mt-2 xl:mt-4">
+              <label class="contents" for="checkbox_3">
+                <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox_3" id="checkbox_3" required />
+                <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="#6B6B6B" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <svg class="hidden peer-checked:block" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="var(--brand-blue-2)" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <span class="text-xs xl:text-xl text-gray-500
+                ml-1">[필수] 개인정보 수집 및 서비스 활용 동의</span>
+              </label>
+            </div>
+            <br />
+            <div class="inline-flex relative items-center
+              mt-2 xl:mt-4">
+              <label class="contents" for="checkbox_4">
+                <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox_4" id="checkbox_4" required />
+                <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="#6B6B6B" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <svg class="hidden peer-checked:block" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="var(--brand-blue-2)" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <span class="text-xs xl:text-xl text-gray-500
+                ml-1">[필수] 채널 홈페이지 개인정보 제 3자 제공동의</span>
+              </label>
+            </div>
+            <br />
+            <div class="inline-flex relative items-center
+              mt-2 xl:mt-4">
+              <label class="contents" for="checkbox_5">
+                <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox_5" id="checkbox_5" />
+                <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="#6B6B6B" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <svg class="hidden peer-checked:block" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="var(--brand-blue-2)" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <span class="text-xs xl:text-xl text-gray-500
+                ml-1">[선택] 개인정보 제 3자 제공동의</span>
+              </label>
+            </div>
+            <br />
+            <div class="inline-flex relative items-center
+              mt-2 xl:mt-4">
+              <label class="contents" for="checkbox_6">
+                <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox_6" id="checkbox_6"/>
+                <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="#6B6B6B" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <svg class="hidden peer-checked:block" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="var(--brand-blue-2)" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <span class="text-xs xl:text-xl text-gray-500
+                ml-1">[선택] 개인정보 수집 및 서비스 활용 동의</span>
+              </label>
+            </div>
+            <br />
+            <div class="inline-flex relative items-center
+              mt-2 xl:mt-4 ml-4">
+              <label class="contents" for="checkbox_7">
+                <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox_7" id="checkbox_7"/>
+                <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="#6B6B6B" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <svg class="hidden peer-checked:block" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="var(--brand-blue-2)" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <span class="text-xs xl:text-xl text-gray-500
+                ml-1">[선택] 마케팅 정보 SMS 수신동의</span>
+              </label>
+            </div>
+            <br />
+            <div class="inline-flex relative items-center
+              mt-2 xl:mt-4 ml-4">
+              <label class="contents" for="checkbox_8">
+                <input class="absolute top-0 left-0 m-0 appearance-none peer" type="checkbox" name="checkbox_8" id="checkbox_8"/>
+                <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="#6B6B6B" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <svg class="hidden peer-checked:block" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_100_5625)"> <path d="M3.01758 6.53848L6.61758 10.7176L14.6535 3.59766" stroke="var(--brand-blue-2)" stroke-width="1.23077"/> </g> <defs> <clipPath id="clip0_100_5625">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"/> </clipPath> </defs>
+                </svg>
+                <span class="text-xs xl:text-xl text-gray-500
+                ml-1">[선택] 마케팅 정보 수신동의</span>
+              </label>
+            </div>
+            
+          </div>
+          <div class="mt-4">
             <button class="w-2xs md:w-[26rem] xl:w-[45.75rem] h-[2.625rem] md:h-[3.125rem] xl:h-[5.375rem]
             rounded-sm
-            bg-(--gray-700) hover:bg-white
-            text-xs md:text-base xl:text-xl text-(--gray-400) font-semibold" type="submit">확인</button>
+            bg-gray-700 active:bg-gray-100 hover:bg-white 
+            text-xs md:text-base xl:text-xl text-gray-400 active:text-black hover:text-black font-semibold " id="useremail" type="submit" herf="/">확인</button>
           </div>
         </fieldset>
       </form>
     </div>
-
-    <!-- footer -->
-    <hr class="border-t border-(--gray-500) 
-               mx-4 mt-13 
-               md:mx-10 md:mt-18 
-               xl:mx-17 xl:mt-35" />
-    <footer class="mx-4 
-                   md:mx-10 md:mb-25 
-                   xl:mx-17 xl:mb-42">
+    <hr class="border-t border-gray-500 bor" />
+    <footer class="">
       <div
         class="
         flex flex-col  md:flex-row xl:flex-row
         mb-4 mt-4
         gap-1 md:gap-5  xl:gap-9">
-        <span class="text-(--gray-200) text-xs xl:text-xl"><a href="/">고객센터</a></span>
-        <span class="text-(--gray-200) text-xs xl:text-xl"><a href="/">이용약관</a></span>
-        <span class="text-(--gray-200) text-xs xl:text-xl"><a href="/">개인정보처리방침</a></span>
-        <span class="text-(--gray-200) text-xs xl:text-xl"><a href="/">청소년 보호정책</a></span>
-        <span class="text-(--gray-200) text-xs xl:text-xl"><a href="/">법적고지</a></span>
-        <span class="text-(--gray-200) text-xs xl:text-xl"><a href="/">이벤트</a></span>
-        <span class="text-(--gray-200) text-xs xl:text-xl"><a href="/">인재채용</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/">고객센터</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/">이용약관</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/">개인정보처리방침</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/">청소년 보호정책</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/">법적고지</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/">이벤트</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/">인재채용</a></span>
       </div>
-      <section class="max-md:hidden mb-4 
-                    text-(--gray-500)  md:text-xs xl:text-xl ">
+      <section class="max-md:hidden mb-4 text-gray-500  md:text-xs xl:text-xl ">
         <div>
           대표이사 : YANG JIEUL | <u>사업자정보확인</u> | 사업자등록번호 :
           188-88-01893 | 통신판매신고번호 : 2020-서울마포-3641호
@@ -426,9 +643,10 @@
           </defs>
         </svg>
       </div>
-      <div class=" text-(--gray-500) text-xs xl:text-xl">
+      <div class=" text-gray-500 text-xs xl:text-xl">
         Copyright &copy; 주식회사 티빙 All right reserved.
       </div>
     </footer>
   </body>
 </html>
+
