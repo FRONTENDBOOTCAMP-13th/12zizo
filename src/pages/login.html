@@ -44,7 +44,7 @@
       <form action="/" method="post" class="input-component">
         <!-- 아이디 -->
         <fieldset>
-          <div class="input-id-component ">
+          <div class="input-id-component">
             <label for="username" class="sr-only">아이디</label>
             <input
               class="input-username peer
@@ -61,7 +61,7 @@
               required
               placeholder="아이디"
               pattern="^[a-z]{6,12}$|^[a-z0-9]{6,12}$"
-              aria-describedby="hint-keyword error-username"
+              aria-describedby="error-username"
               />
               <p class="message
               peer-invalid:text-red-500
@@ -89,7 +89,7 @@
               pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,15}"
               required
               placeholder="비밀번호"
-              aria-describedby="hint-keyword"
+              aria-describedby="error-password"
               />
               <p class="message
               peer-invalid:text-red-500
