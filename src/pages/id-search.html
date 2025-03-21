@@ -50,10 +50,10 @@
       </div>
       <form action="/" method="post" class="input-component">
         <fieldset>
-          <div class="input-id-component ">
+          <div class="input-email-component ">
             <label for="useremail" class="sr-only">이메일</label>
             <input
-              class="input-username peer
+              class="input-useremail peer
               sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
               pt-0 pr-5 pb-0 pl-4 mb-1
               bg-[var(--brand-dark-bg-2)] rounded-sm
@@ -66,16 +66,13 @@
               name="useremail"
               required
               placeholder="이메일"
-              pattern="^[a-z]{6,12}$|^[a-z0-9]{6,12}$"
-              aria-describedby="hint-keyword error-username"
               />
           </div>
-          
           <div class="mt-4">
             <button class="w-2xs md:w-[26rem] xl:w-[45.75rem] h-[2.625rem] md:h-[3.125rem] xl:h-[5.375rem]
             rounded-sm
             bg-gray-700 active:bg-gray-100 hover:bg-white 
-            text-xs md:text-base xl:text-xl text-gray-400 active:text-black hover:text-black font-semibold " id="useremail" type="button">확인</button>
+            text-xs md:text-base xl:text-xl text-gray-400 active:text-black hover:text-black font-semibold " id="useremail" type="submit" aria-label="이메일 작성 후 해당 이메일로 가입된 아이디 확인">확인</button>
           </div>
         </fieldset>
       </form>
@@ -98,10 +95,15 @@
       <button class="w-2xs md:w-[26rem] xl:w-[45.75rem] h-[2.625rem] md:h-[3.125rem] xl:h-[5.375rem]
       rounded-sm
       bg-gray-100 text-black hover:bg-white 
-      text-xs md:text-base xl:text-xl font-semibold" type="button">본인인증하기</button>
+      text-xs md:text-base xl:text-xl font-semibold" type="button" aria-label="본인인증으로 아이디 찾기">본인인증하기</button>
     </div>
-    <hr class="border-t border-gray-500 bor" />
-    <footer class="">
+    <hr class="border-t border-(--gray-500) 
+               mx-4 mt-13 
+               md:mx-10 md:mt-18 
+               xl:mx-17 xl:mt-35" />
+    <footer class="mx-4 
+                   md:mx-10 md:mb-25 
+                   xl:mx-17 xl:mb-42">
       <div
         class="
         flex flex-col  md:flex-row xl:flex-row
