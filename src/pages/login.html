@@ -38,10 +38,10 @@
       </div>
     </div>
     <div class="flex flex-col items-center
-       mt-7 mb-[3.25rem] md:mb-[4.375rem] xl:mb-[8.75rem] ">
-      <h2 class="text-base md:text-[1.8125rems] xl:text-[2.375rem] font-bold text-white
-      mb-7">TIVING ID 로그인</h2>
-      <form action="/" method="post" class="input-component">
+       mt-7 mb-[3.25rem] md:mb-[4.375rem] xl:mb-[8.75rem]">
+      <h2 class="mb-7
+      text-base md:text-[1.8125rems] xl:text-[2.375rem] font-bold text-white">TIVING ID 로그인</h2>
+      <form action="/src/pages/main-page.html" method="post" class="input-component">
         <!-- 아이디 -->
         <fieldset>
           <div class="input-id-component">
@@ -102,8 +102,10 @@
           <div class="inline-flex relative items-center
             mt-2 md:mt-3 xl:mt-4">
             <label class="contents" for="checkbox">
-              <input class="absolute top-0 left-0 m-0 appearance-none peer
-              w-4 h-4" type="checkbox" name="checkbox" id="checkbox" required />
+              <input class="appearance-none peer
+              absolute
+              top-0 left-0 m-0 
+              w-4 h-4" type="checkbox" name="checkbox" id="checkbox"/>
               <svg class="peer-checked:hidden" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" width="16" height="16" rx="8" fill="#565656"/>
                 <g clip-path="url(#clip0_98_5164)">
@@ -116,15 +118,15 @@
                 <path d="M4.39648 7.71429L7.29846 10.6169L12.6016 5.31445" stroke="white" stroke-width="1.23077"/>
                 </g> <defs> <clipPath id="clip0_98_5164"> <rect width="12.3077" height="12.3077" fill="white" transform="translate(2.34668 1.8457)"/> </clipPath> </defs>
               </svg>
-              <span class="text-xs xl:text-xl text-gray-500
-               ml-1">자동로그인</span>
+              <span class="ml-1
+              text-xs xl:text-xl text-gray-500">자동로그인</span>
             </label>
           </div>
           <div class="mt-4">
             <button class="w-2xs md:w-[26rem] xl:w-[45.75rem] h-[2.625rem] md:h-[3.125rem] xl:h-[5.375rem]
             rounded-sm
            bg-[var(--brand-blue-1)] hover:bg-[var(--brand-blue-3)]
-            text-xs md:text-base xl:text-xl text-white font-semibold" type="submit"><a href="/src/pages/main-page.html">로그인하기</button>
+            text-xs md:text-base xl:text-xl text-white font-semibold" type="submit">로그인하기</button>
           </div>
         </fieldset>
       </form>

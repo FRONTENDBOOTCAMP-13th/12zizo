@@ -48,12 +48,12 @@
         mb-1">이메일로 찾기</h3>
         <p class="text-xs md:text-base xl:text-[1.75rem] text-gray-400">가입 시 등록한 이메일을 입력해주세요.</p>
       </div>
-      <form action="/" method="post" class="input-component">
+      <form action="/src/pages/login.html" method="post" class="input-component">
         <fieldset>
-          <div class="input-email-component ">
+          <div class="input-email-component">
             <label for="useremail" class="sr-only">이메일</label>
             <input
-              class="input-useremail peer
+              class="input-useremail
               sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
               pt-0 pr-5 pb-0 pl-4 mb-1
               bg-[var(--brand-dark-bg-2)] rounded-sm
@@ -72,18 +72,17 @@
             <button class="w-2xs md:w-[26rem] xl:w-[45.75rem] h-[2.625rem] md:h-[3.125rem] xl:h-[5.375rem]
             rounded-sm
             bg-gray-700 active:bg-gray-100 hover:bg-white 
-            text-xs md:text-base xl:text-xl text-gray-400 active:text-black hover:text-black font-semibold " id="useremail" type="submit" aria-label="이메일 작성 후 해당 이메일로 가입된 아이디 확인">확인</button>
+            text-xs md:text-base xl:text-xl text-gray-400 active:text-black hover:text-black font-semibold " type="submit" aria-label="이메일 작성 후 해당 이메일로 가입된 아이디 확인">확인</button>
           </div>
         </fieldset>
       </form>
       <div class="w-72 md:w-[26rem] xl:w-[45.75rem]">
         <p class="flex justify-center items-center 
-        min-w-12
-        my-8
+        min-w-12 my-8
         text-xs xl:text-base text-gray-700
-        before:content-[''] before:block before:w-full before:h-[.0625rem] before:bg-white before:mr-2
-        after:content-[''] after:block after:w-full after:h-[.0625rem] after:bg-white after:ml-2">
-        <span>또</span><span>는</span>
+        before:content-[''] before:grow before:h-[.0625rem] before:bg-white before:mr-2
+        after:content-[''] after:grow after:h-[.0625rem] after:bg-white after:ml-2">
+        <span class="flex-none">또는</span>
         </p>
       </div>
       <div class="w-72 md:w-[26rem] xl:w-[45.75rem]
