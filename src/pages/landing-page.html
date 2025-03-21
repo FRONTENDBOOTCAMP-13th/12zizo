@@ -18,7 +18,7 @@
   </head>
   <body class="bg-black">
     <div class="relative top-4 left-4 md:top-5.5 md:left-10 xl:top-8 z-10">
-        <a href="https://www.tving.com/">
+        <a href="/">
           <svg class="w-[2.875rem] h-[1rem] md:w-[4.8125rem] md:h-[1.5rem] xl:w-[8.25rem] xl:h-[2.125rem]" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_3300_276" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="46" height="12">
             <path d="M0 2.24219H45.8296V13.759H0V2.24219Z" fill="white"/>
@@ -78,11 +78,13 @@
       </div>
 
 
-   <section class="mt-12 md:mt-16 xl:mt-20">
+   <section class="mt-12 md:mt-16 xl:mt-20" aria-labelledby="original-content-title">
     <div class="
     mb-2 md:mb-4 xl:mb-6
     max-md:pb-4 pb-16 xl:pb-24 ">
-        <h2 class="
+        <h2
+        id="original-content-title" 
+        class="
         mb-2 md:mb-4 xl:mb-6
         text-white text-center font-bold 
         text-xl md:text-3xl xl:text-5xl
@@ -90,38 +92,49 @@
         <div class="
         text-gray-200 text-center 
         text-xs md:text-base xl:text-3xl
-        ">오리지널 콘텐츠를 만나보세요!</div>
+        "
+        aria-describedby="original-content-title"
+        >오리지널 콘텐츠를 만나보세요!</div>
         <div class="
         text-gray-200 text-center 
         text-xs xl:text-xl
-        ">차별화된 웰메이드 오리지널 콘텐츠</div>
+        "
+        aria-describedby="original-content-title"
+        >차별화된 웰메이드 오리지널 콘텐츠</div>
     </div>
-    <div class="flex justify-center items-center relative mb-28 ">
+    <div class="flex justify-center items-center relative mb-28 "
+    aria-label="랜딩페이지 썸네일 이미지 캐러셀">
         <!-- 모바일에서 보여줄 이미지 -->
-        <img class="max-md: w-[17.313rem] h-[25rem] md:hidden"  src="/src/assets/study_group_400.webp">
+        <img class="max-md: w-[17.313rem] h-[25rem] md:hidden" 
+             src="/src/assets/study_group_400.webp"
+             alt="스터디 그룹" 
+             >
 
         <!-- 태블릿, 데스크탑에서 보여줄 이미지 셋 -->
         <!-- 왼쪽 이미지 -->
         <div class="relative w-[40%] max-md:hidden ">
           <img 
+            class="w-full h-full"
             src="/src/assets/kim_seong_geun's_winter-vacation_1024_webp.webp" 
-            class="w-full h-full " 
+            alt="김성근의 겨울방학" 
           />
           <div class="absolute inset-0 bg-black opacity-70"></div>
         </div>
         <!-- 가운데 이미지 -->
         <div class="absolute left-1/2 -translate-x-1/2 w-[50%] z-10 max-md:hidden ">
           <img
-            src="/src/assets/studygroup_1024.webp"
             class="w-full h-full"
+            src="/src/assets/studygroup_1024.webp"
+            alt="스터디 그룹" 
           />
         </div>
       
         <!-- 오른쪽 이미지 -->
         <div class="relative w-[40%] max-md:hidden  ">
           <img 
-            src="/src/assets/the_scandal_of_chunhwa_1024.webp" 
             class="w-full h-full " 
+            src="/src/assets/the_scandal_of_chunhwa_1024.webp" 
+            alt="춘화연애담" 
           />
           <div class="absolute inset-0 bg-black opacity-70"></div>
         </div>
@@ -130,9 +143,11 @@
 
 
 
-<section class="mt-12 md:mt-16 xl:mt-20 overflow-x-hidden">
+<section class="mt-12 md:mt-16 xl:mt-20 overflow-x-hidden" aria-labelledby="content-discovery-title">
     <div class="pb-8">
-        <h2 class="
+        <h2 
+        id="content-discovery-title"
+        class="
         mb-2 md:mb-4 xl:mb-6
         text-white text-center font-bold 
         text-xl
@@ -149,7 +164,7 @@
         text-xs xl:text-xl
         ">최신, 인기 TV프로그램, 영화, 해외시리즈, 파라마운트+ 오리지널 및 독점 </div>
     </div>
-    <div class="grid gap-1">
+    <div class="grid gap-1" aria-label="자동 스크롤 이미지 캐러셀">
         <div class="flex gap-3  first-row animate-scrollslow">
           <img class="
           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
@@ -262,7 +277,10 @@
                 mb-40 md:mb-60 xl:mb-80
                 w-[11.75rem] md:w-[17.688rem] xl:w-[31.625rem] h-[2.125rem] md:h-[2.688rem] xl:h-[5rem] 
                 bg-[var(--brand-blue-1)] hover:bg-[var(--brand-blue-3)] 
-                text-xs md:text-base xl:text-xl text-white font-semibold" type="submit">
+                text-xs md:text-base xl:text-xl text-white font-semibold" type="submit"
+                aria-label="타잉 서비스 이용하기" 
+                role="button"
+                >
                 <svg class="
                     place-items-start mr-2
                     w-[1.125rem] h-[1.125rem] md:w-[1.25rem] md:h-[1.25rem] xl:w-[1.875rem] xl:h-[2.0625rem]" 
