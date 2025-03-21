@@ -14,6 +14,23 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', () => {
+        // DOM 선택 부분
+        const closeDialogButton = document.querySelector('.close-dialog');
+        const dialog = document.querySelector('.panel-dialog');
+        
+        // 함수 구현 부분
+        const closeDialog = () => dialog.close();
+        
+        // 페이지 로드 시 자동으로 모달 표시
+        dialog.showModal();
+    
+        // 이벤트 바인딩 부분
+        closeDialogButton.addEventListener('click', closeDialog);
+
+      });
+    </script>
     <!-- <script type="module" src="/src/main.js"></script> -->
   </head>
   <body class="bg-black">
@@ -649,5 +666,28 @@
         Copyright &copy; 주식회사 티빙 All right reserved.
       </div>
     </footer>
+<!-- 교육용 모달 추가 -->
+<div class="mt-4">
+  <button class="show-dialog" type="button">메인 페이지로 이동</button>
+  <dialog class="panel-dialog 
+  fixed 
+  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+  w-3xs md:w-[18.4375rem] xl:w-[32.875rem] h-30 md:h-32 xl:h-52
+  border rounded-xl
+  bg-[var(--brand-dark-bg-2)]" aria-labelledby="information">
+    <div class="flex flex-col">
+      <h2 class="pt-3 md:pt-4 xl:pt-7 pb-2 md:pb-2 xl:pb-5
+      text-base md:text-lg xl:text-2xl text-white text-center" id="information">교육용 페이지 안내</h2>
+      <p class="text-xs md:text-sm xl:text-xl text-white text-center">해당 페이지는 상업용 사이트가 아닙니다.</p>
+      <div class="flex flex-1 grow-0 basis-0 items-center justify-center">
+        <button class="close-dialog flex items-center justify-center
+            w-[4.5625rem] md:w-[5.625rem] xl:w-[9.8125rem] h-10 md:h-[2.9375rem] xl:h-[4.125rem]
+            px-2.5
+            text-xs xl:text-xl text-gray-300 hover:text-white
+            cursor-pointer" type="button">확인</button>
+      </div>
+    </div>
+  </dialog>
+</div>
   </body>
 </html>
