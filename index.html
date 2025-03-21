@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UI 프로젝트 - CSS</title>
+    <title>12간지 UI 프로젝트</title>
     <link rel="icon" href="/vite.svg" />
     <link
       rel="preload"
@@ -14,55 +14,426 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" rel="stylesheet">    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <style>
+        .glide__slide {
+          overflow: hidden;
+          height: auto;
+        }
+        
+        .glide__track {
+          overflow: hidden;
+        }
+        
+        .glide__slides {
+          overflow: hidden;
+        }
+        
+        .glide__slide img {
+          display: block;
+          width: 100%;
+          object-fit: cover;
+        }
+      </style>
     <!-- <script type="module" src="/src/main.js"></script> -->
   </head>
-  <body class="m-10">
-    <h1 class="text-2xl">TAING</h1>
-    <h2 class="text-red-500">&lt;컴포넌트&gt;</h2>
-    <a href="/src/components/footer.html">footer 컴포넌트</a>
-    <br />
-    <a href="/src/components/login-input.html">login input 컴포넌트</a>
-    <br />
-    <a href="/src/components/login-button.html">login button 컴포넌트</a>
-    <br />
-    <a href="/src/components/header.html">header-bar 컴포넌트</a>
-    <br />
-    <a href="/src/components/search.html">검색 input 컴포넌트</a>
-    <br />
-    <a href="/src/components/image-carousel.html">랜딩페이지 이미지 캐러셀 컴포넌트</a>
-    <br />
-    <a href="/src/components/logout.html">로그아웃 생성을 위한 페이지</a>
-    <br />
-    <a href="/src/components/modal.html">모달 창 생성 컴포넌트</a>
-    <br />
-    <a href="/src/components/profile-change.html">프로필 전환 및 편집 컴포넌트</a>
-    <br />
-    <a href="/src/components/search.html">검색 컴포넌트</a>
-    <br />
-    <a href="/src/components/transparent-button.html">투명버튼 및 프로필 잠금 및 편집 표시 컴포넌트</a>
-    <br />
-    <a href="/src/components/top20-image-carousel.html">TOP20 이미지 캐러셀 컴포넌트</a>
-    <br />
-    <a href="/src/components/common-image-carousel.html">공통 이미지 캐러셀 컴포넌트</a>
-    <br />
-    <a href="/src/components/original.html">타잉 오리지널 컴포넌트</a>
-    <br />
-    <a href="/src/components/live-ranking-component.html">실시간 인기 Live 컴포넌트</a>
-  
-    <hr class="my-5" />
+<body class="bg-gray-100">
+    <nav class="">
+        <div class="flex items-start">
+            <a href="/" class="flex">
+              <img
+                src="/src/assets/12-logo.png"
+                alt="12조 로고"
+                class="
+                w-[176px] h-[57px]
+               "
+              />
+            </a>
+          </div>
+    </nav>
 
-    <h2 class="text-red-500">&lt;페이지&gt;</h2>
-    <a href="/src/pages/login.html">로그인 페이지</a>
-    <br />
-    <a href="/src/pages/id-search.html">아이디 찾기 페이지</a>
-    <br />
-    <a href="/src/pages/password-search.html">비밀번호 찾기 페이지</a>
-    <br />
-    <a href="/src/pages/profile_switch.html">프로필 전환 페이지</a>
-    <br />
-    <a href="/src/pages/profile_edit.html">프로필 편집 페이지</a>
-    <br />
-    <a href="/src/pages/landing-page.html">랜딩페이지</a>
+    <header class="bg-gray-800 opacity-90  flex h-20 items-center justify-center">
+        <p class="text-white text-xl md:text-2xl xl:text-4xl text-center">멋쟁이사자처럼 12조 UI 프로젝트 소개 </p>
+    </header>
+
+    <!-- 팀원 소개 영역역 -->
+    <section class="mb-16 ">
+            <h2 class="text-3xl font-bold text-gray-900 mt-8 mb-8">팀원 소개</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4  gap-8">                
+                <div class="bg-white rounded-lg shadow p-6 text-center min-w-[200px] md:max-w-[368px] md:max-h-[280px]">
+                    <img src="/src/assets/teammate1_profile.webp" alt="팀원 1" 
+                    class="
+                    w-32 h-32 rounded-full mx-auto mb-4 object-cover">                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">엄현욱</h3>
+                    <p class="text-gray-600 mb-2">프론트엔드</p>
+                    <p class="text-sm text-gray-500">컴포넌트, 페이지 개발</p>
+                </div>                
+                <div class="bg-white rounded-lg shadow p-6 text-center min-w-[200px] md:max-w-[368px] md:max-h-[280px]">
+                    <img src="/src/assets/teammate2_profile.webp" alt="팀원 2" 
+                    class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">김지연</h3>
+                    <p class="text-gray-600 mb-2">프론트엔드</p>
+                    <p class="text-sm text-gray-500">컴포넌트, 페이지 개발</p>
+                </div>                
+                <div class="bg-white rounded-lg shadow p-6 text-center min-w-[200px] md:max-w-[368px] md:max-h-[280px]">
+                    <img src="/src/assets/teammate3_profile.webp" alt="팀원 3" 
+                    class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">우영찬</h3>
+                    <p class="text-gray-600 mb-2">프론트엔드</p>
+                    <p class="text-sm text-gray-500">컴포넌트, 페이지 개발</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 text-center min-w-[200px] md:max-w-[368px] md:max-h-[280px]">
+                    <img src="/src/assets/teammate4_profile.webp" alt="팀원 4" 
+                    class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">이진현</h3>
+                    <p class="text-gray-600 mb-2">프론트엔드</p>
+                    <p class="text-sm text-gray-500">컴포넌트, 페이지 개발</p>
+                </div>              
+            </div>
+        </section>
+
+        <!-- 개발한 컴포넌트 영역  -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">개발한 컴포넌트</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4  gap-8">
+                <div class="bg-white rounded-lg shadow p-6">                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">버튼, 인풋 컴포넌트</h3>
+                    <p class="text-gray-600">
+                        <a class="underline" href="/src/components/login-button.html">로그인 버튼,</a> 
+                        <a class="underline" href="/src/components/login-input.html"> 로그인 인풋 버튼,</a>
+                        <a class="underline" href="/src/components/profile-change.html">프로필 버튼,</a>
+                        <a class="underline" href="/src/components/transparent-button.html">투명버튼</a>
+                    </p>                
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">이미지 캐러셀 컴포넌트</h3>
+                    <p class="text-gray-600">
+                       <a class="underline" href="/src/components/image-carousel.html">랜딩페이지,</a>
+                       <a class="underline" href="/src/components/top20-image-carousel.html">TOP20 이미지,</a>
+                       <a class="underline" href="/src/components/common-image-carousel.html">공통 이미지,</a>
+                       <a class="underline" href="/src/components/live-ranking-component.html">실시간 랭킹 이미지</a>
+                    </p>               
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">     
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">헤더, 푸터 컴포넌트</h3>
+                    <p class="text-gray-600">
+                        <a class="underline" href="/src/components/header.html">헤더,</a>
+                        <a class="underline" href="/src/components/footer.html">푸터</a>
+                   
+                    </p>                
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">                    
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">검색, 모달 컴포넌트</h3>
+                    <p class="text-gray-600">
+                    <a class="underline" href="/src/components/search.html">검색,</a>
+                    <a class="underline" href="/src/components/logout.html">로그아웃 모달,</a>
+                    <a class="underline" href="/src/components/modal.html">공지 모달</a>    
+                    </p>       
+                </div>
+        </section>
+
     
-  </body>
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">구현된 페이지</h2>
+            <a class="underline text-xl font-bold text-gray-900 " href="/src/pages/landing-page.html" class="underline">
+                구현된 페이지 구경하러 가기😎
+            </a>
+            <h3 class="text-base font-bold text-gray-500 mt-5">구현된 페이지 예시</h3>
+            <div class="glide mt-2">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">                        
+                        <li class="glide__slide">
+                            <img src="/src/assets/page1.png" alt="대시보드" class="w-full rounded-lg shadow">                            
+                            <p class="text-center mt-8 text-gray-700">랜딩페이지</p>
+                        </li>
+                        <li class="glide__slide">                            
+                            <img src="/src/assets/page2.png" alt="프로필" class="w-full rounded-lg shadow">                           
+                            <p class="text-center mt-4 text-gray-700">프로필 페이지</p>
+                        </li>
+                        <li class="glide__slide">                            
+                         <img src="/src/assets/page1.png" alt="대시보드" class="w-full rounded-lg shadow">                         
+                         <p class="text-center mt-4 text-gray-700">메인 페이지</p>
+                        </li>
+                    </ul>                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">프로젝트 규칙</h2>
+            <div class="bg-white rounded-lg shadow">
+                <div class="border-b">
+                    <nav class="flex -mb-px" aria-label="Tabs">                        
+                        <button class="text-custom border-custom px-4 py-4 text-sm font-medium border-b-2" onclick="showTab(event, 'coding')">                            
+                        코딩 컨벤션
+                        </button>
+                        <button class="text-gray-500 hover:text-gray-700 px-4 py-4 text-sm font-medium border-b-2 border-transparent" onclick="showTab(event, 'git')">Git 규칙
+                        </button>
+                        <button class="text-gray-500 hover:text-gray-700 px-4 py-4 text-sm font-medium border-b-2 border-transparent" onclick="showTab(event, 'branch')">브랜치 네이밍 룰
+                        </button>
+                    </nav>
+                </div>                
+                <div id="coding" class="tab-content p-6">
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">                        
+                        <li>컴포넌트명 : Kebab case 사용</li>
+                        <li>class 속성 순서 : display > position > width height >spacing > bg > text(크기 >색상>두께)</li>                        
+                        <li>동일한 속성일 경우 브레이크포인트별로 묶어서 사용</li>
+                        <li>비슷한 속성끼리 묶어서 줄넘김</li>    
+                        <li>단위는 rem 단위 사용</li>                       
+                    </ul>
+                </div>
+                <div id="git" class="tab-content p-6 hidden">
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">                        
+                        <li>🎉 Init: 초기 설정</li>
+                        <li>🎨 Feat: 기능 추가, 변경</li>                        
+                        <li>🔥 Remove : 파일이나 코드 삭제</li>
+                        <li>📝 Docs: readme.md, json 파일 등 수정, 라이브러리 설치</li>
+                        <li>💄 Style: CSS 등 사용자 UI 디자인 변경</li>
+                        <li>♻️ Refactor: 코드 리팩토링</li>
+                        <li>🧪 Test: 테스트 코드 추가, 삭제, 변경 등</li>
+                        <li>🐎 Ci: npm 모듈 설치 등</li>
+                        <li>🐳 Chore: 패키지 매니저 설정할 경우, 운영 코드 변경이 없는 경우</li>
+                    </ul>                
+                </div>
+                <div id="branch" class="tab-content p-6 hidden">
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">                        
+                        <li>main: 최종 배포 브랜치</li>
+                        <li>develop: 개발 브랜치</li>
+                        <li>develop/feat/components: 컴포넌트 개발 브랜치</li>
+                        <li>develop/pages: 페이지 개발 브랜치</li>
+                        <li>develop/style: 스타일링 개발 브랜치</li>
+                        <li>develop/fix: 개발 핫픽스 브랜치</li>
+                        <li>develop/setting: 개발 환경 브랜치</li>   
+                    </ul>
+                </div>            </div>
+        </section>
+
+        <section class="mb-16">
+            <!-- 마일스톤&주요이슈 컨테이너 - Flexbox로 반반 나누기 -->
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- 마일스톤 영역 -->
+                <div class="space-y-8 md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">마일스톤</h2>
+                    <div class="relative">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-calendar text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">마일스톤 1</h3>
+                                <p class="text-sm text-gray-500">~3월 16일</p>
+                                <p class="mt-1 text-gray-600">개발 환경 세팅, 필요한 asset 준비, 기본 컴포넌트 생성</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">마일스톤 2</h3>
+                                <p class="text-sm text-gray-500">~3월 19일</p>
+                                <p class="mt-1 text-gray-600">화면 구성에 필요한 추가 컴포넌트 생성</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">마일스톤 3</h3>
+                                <p class="text-sm text-gray-500">~3월 21일</p>
+                                <p class="mt-1 text-gray-600">페이지 생성</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 주요 이슈 영역 -->
+                <div class="space-y-8 md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">주요 이슈</h2>
+                    <div class="relative">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-star text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">주요 이슈 1</h3>
+                                <p class="text-sm text-gray-500">~3월 16일</p>
+                                <p class="mt-1 text-gray-600">개발 환경 세팅, 에셋 수집</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-bug text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">주요 이슈 2</h3>
+                                <p class="text-sm text-gray-500">~3월 19일</p>
+                                <p class="mt-1 text-gray-600">컴포넌트 생성</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-rocket text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">주요 이슈 3</h3>
+                                <p class="text-sm text-gray-500">~3월 20일</p>
+                                <p class="mt-1 text-gray-600">컴포넌트 조립, 페이지 생성</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-rocket text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">주요 이슈 4</h3>
+                                <p class="text-sm text-gray-500">~3월 21일</p>
+                                <p class="mt-1 text-gray-600">접근성 개선</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-custom flex items-center justify-center">
+                                <i class="fas fa-rocket text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">주요 이슈 5</h3>
+                                <p class="text-sm text-gray-500">~3월 25일</p>
+                                <p class="mt-1 text-gray-600">최종 배포</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">개인별 프로젝트 회고</h2>            
+            <div class="space-y-4">
+                <div class="border rounded-lg">
+                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleAccordion('teammate1')">                        <div class="flex items-center justify-between">
+                            <span class="text-lg font-medium text-gray-900">엄현욱</span>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </div>                    
+                    </button>
+                    <div id="teammate1" class="hidden px-6 pb-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">                            
+                            <a class="underline" href="/src/md/hyunwook.md">
+                                <li>회고 보러가기</li>
+                            </a>                        
+                        </ul>
+                    </div>
+                </div>                
+                <div class="border rounded-lg">
+                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleAccordion('teammate2')">                        <div class="flex items-center justify-between">
+                            <span class="text-lg font-medium text-gray-900">김지연</span>
+                        </div>                    </button>
+                    <div id="teammate2" class="hidden px-6 pb-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">                            
+                            <a class="underline" href="/src/md/jiyeon.md">
+                                <li>회고 보러가기</li>
+                            </a>                        
+                        </ul>
+                    </div>
+                </div>                
+                <div class="border rounded-lg">
+                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleAccordion('teammate3')">                        <div class="flex items-center justify-between">
+                            <span class="text-lg font-medium text-gray-900">우영찬</span>
+                        </div>                    </button>
+                    <div id="teammate3" class="hidden px-6 pb-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">                             
+                            <a class="underline" href="/src/md/youngchan.md">
+                                <li>회고 보러가기</li>
+                            </a>  
+                        </ul>
+                    </div>
+                </div>
+                <div class="border rounded-lg">
+                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleAccordion('teammate4')">                        <div class="flex items-center justify-between">
+                            <span class="text-lg font-medium text-gray-900">이진현</span>
+                        </div>                    </button>
+                    <div id="teammate4" class="hidden px-6 pb-4">
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">                             
+                            <a class="underline" href="/src/md/jinhyun.md">
+                                <li>회고 보러가기</li>
+                            </a>  
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>    </main>
+
+    <footer class="bg-gray-800 opacity-90 ">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center text-gray-400">                
+                <p>&copy; 2025 멋쟁이사자처럼 13기 UI 프로젝트 12조. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>        
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Glide !== 'undefined') {
+      new Glide('.glide', {
+        type: 'carousel',
+        perView: 1,
+        gap: 0,
+        animationDuration: 400,  // 애니메이션 시간을 늘려 부드럽게
+        animationTimingFunc: 'cubic-bezier(0.165, 0.840, 0.440, 1.000)',  // 이징 함수 추가
+        rewind: false,  // 첫 슬라이드와 마지막 슬라이드 간 전환 시 애니메이션 끄기
+        throttle: 50,  // 부드러운 애니메이션을 위한 쓰로틀 설정
+        peek: 0,  // 다음 슬라이드가 보이지 않도록 설정
+        breakpoints: {}
+      }).mount();
+    }
+    
+    // 나머지 함수들...
+  });
+
+        function showTab(event, tabId) {
+            const tabButtons = event.target.parentElement.children;
+            const tabContents = document.getElementsByClassName('tab-content');
+
+            Array.from(tabButtons).forEach(button => {
+                button.classList.remove('text-custom', 'border-custom');
+                button.classList.add('text-gray-500', 'border-transparent');
+            });
+
+            Array.from(tabContents).forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            event.target.classList.remove('text-gray-500', 'border-transparent');
+            event.target.classList.add('text-custom', 'border-custom');
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = content.previousElementSibling.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('fa-chevron-up');
+            icon.classList.toggle('fa-chevron-down');
+        }
+    </script></body>
 </html>
