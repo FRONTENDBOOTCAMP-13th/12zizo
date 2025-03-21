@@ -32,10 +32,13 @@
       });
     </script>
   </head>
-  <body>
+  <body class="w-full h-full
+    m-4
+    text-white
+    bg-black">
     <h1>모달 컴포넌트 생성을 위한 페이지</h1>
-    <div>
-      <button class="show-dialog" type="button">메인 페이지</button>
+    <div class="mt-4">
+      <button class="show-dialog" type="button">메인 페이지로 이동</button>
       <dialog class="panel-dialog 
       fixed 
       top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
@@ -48,7 +51,7 @@
           <p class="text-xs md:text-sm xl:text-xl text-white text-center">해당 페이지는 상업용 사이트가 아닙니다.</p>
           <div class="flex flex-1 grow-0 basis-0 items-center justify-center">
             <button class="flex items-center justify-center
-            h-16 md:h-[2.9375rem] xl:h-24
+            h-14 md:h-[2.9375rem] xl:h-24
             px-2.5
             text-xs md:text-sm xl:text-2xl text-gray-300 hover:text-white
             cursor-pointer" type="button"><a href="/">TAING 페이지로 이동</a></button>
