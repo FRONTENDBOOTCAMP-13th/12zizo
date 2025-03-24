@@ -87,7 +87,7 @@ root
 | 🐎 | CI | CI/CD 관련 설정 및 수정 |
 | 🐳 | Chore | 패키지 매니저 설정 등 운영 코드 변경이 없는 경우 |
 
-## 배포환경?
+## 배포환경
 
 - 배포 환경 : Netlify
 - 배포 URL : https://taing-ui-project-12zizo.netlify.app/
