@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAING-로그아웃 컴포넌트</title>
+    <link rel="icon" href="/vite.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- <script type="module" src="/src/main.js"></script> -->
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', () => {
+        // DOM 선택 부분
+        const showDialogButton = document.querySelector('.show-dialog');
+        const closeDialogButton = document.querySelector('.close-dialog');
+        const dialog = document.querySelector('.panel-dialog');
+
+        // 함수 구현 부분
+        const openDialog = () => dialog.showModal();
+        const closeDialog = () => dialog.close();
+
+        // 이벤트 바인딩 부분
+        showDialogButton.addEventListener('click', openDialog);
+        closeDialogButton.addEventListener('click', closeDialog);
+      });
+    </script>
+  </head>
+  <body class="w-full h-full
+    m-4
+    text-white
+    bg-black">
+    <h1>로그아웃 모달 컴포넌트 생성을 위한 페이지</h1>
+    <div class="mt-4">
+      <button class="show-dialog" type="button">로그아웃</button>
+      <dialog class="panel-dialog 
+      fixed 
+      top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      w-[12.25rem] md:w-[18.4375rem] xl:w-[32.875rem] h-[5.6875rem] md:h-[6.875rem] xl:h-48
+      bg-[var(--brand-dark-bg-2)]" aria-labelledby="logout">
+        <div class="flex flex-col">
+          <h2 class="pt-5 md:pt-7 xl:pt-9 pb-3 md:pb-4 xl:pb-9
+          text-xs xl:text-xl text-white text-center" id="logout">로그아웃 하시겠습니까?</h2>
+          <div class="flex flex-1 grow-0 basis-0 items-center justify-center">
+            <button class="flex items-center justify-center
+            w-[4.5625rem] md:w-[5.625rem] xl:w-[9.8125rem] h-10 md:h-[2.9375rem] xl:h-[4.125rem]
+            px-2.5
+            text-xs xl:text-xl text-gray-300 hover:text-white
+            cursor-pointer" type="button"><a href="/">확인</a></button>
+            <button class="close-dialog flex items-center justify-center
+            w-[4.5625rem] md:w-[5.625rem] xl:w-[9.8125rem] h-10 md:h-[2.9375rem] xl:h-[4.125rem]
+            px-2.5
+            text-xs xl:text-xl text-gray-300 hover:text-white
+            cursor-pointer" type="button">취소</button>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </body>
+  </html>

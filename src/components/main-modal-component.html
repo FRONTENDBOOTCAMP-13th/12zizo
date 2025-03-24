@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAING-안내 모달 창 컴포넌트</title>
+    <link rel="icon" href="/vite.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- <script type="module" src="/src/main.js"></script> -->
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', () => {
+        // DOM 선택 부분
+        const showDialogButton = document.querySelector('.show-dialog');
+        const closeDialogButton = document.querySelector('.close-dialog');
+        const dialog = document.querySelector('.panel-dialog');
+
+        // 함수 구현 부분
+        const openDialog = () => dialog.showModal();
+        const closeDialog = () => dialog.close();
+
+        // 이벤트 바인딩 부분
+        showDialogButton.addEventListener('click', openDialog);
+        closeDialogButton.addEventListener('click', closeDialog);
+      });
+    </script>
+  </head>
+  <body class="w-full h-full
+    m-4
+    text-white
+    bg-black">
+    <h1>모달 컴포넌트 생성을 위한 페이지</h1>
+    <div class="mt-4">
+      <button class="show-dialog" type="button">메인 페이지로 이동</button>
+      <dialog class="panel-dialog 
+      fixed 
+      top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      w-3xs md:w-[18.4375rem] xl:w-[32.875rem] h-30 md:h-32 xl:h-52
+      border rounded-xl
+      bg-[var(--brand-dark-bg-2)]" aria-labelledby="information">
+        <div class="flex flex-col">
+          <h2 class="pt-3 md:pt-4 xl:pt-7 pb-2 md:pb-2 xl:pb-5
+          text-base md:text-lg xl:text-2xl text-white text-center" id="information">교육용 페이지 안내</h2>
+          <p class="text-xs md:text-sm xl:text-xl text-white text-center">해당 페이지는 상업용 사이트가 아닙니다.</p>
+          <div class="flex flex-1 grow-0 basis-0 items-center justify-center">
+            <button class="flex items-center justify-center
+            h-14 md:h-[2.9375rem] xl:h-24
+            px-2.5
+            text-xs md:text-sm xl:text-2xl text-gray-300 hover:text-white
+            cursor-pointer" type="button"><a href="/">TAING 페이지로 이동</a></button>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </body>
+  </html>

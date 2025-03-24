@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAING-랜딩페이지 이미지 캐러셀 컴포넌트</title>
+    <link rel="icon" href="/vite.svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous"/>
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- <script type="module" src="/src/main.js"></script> -->
+     
+  </head>
+  <body class="bg-black">
+    <h1>이미지캐러셀 컴포넌트 생성을 위한 페이지</h1>
+
+<!-- 랜딩페이지 티빙에만 있는 재미 섹션 -->
+<br/>
+<br/>
+
+<section aria-labelledby="original-content-title">
+    <div class="max-md:pb-10 pb-16">
+        <h2 class="
+        text-white text-center font-bold 
+        text-xl md:text-3xl xl:text-5xl
+        "
+        id="original-content-title" 
+        >타잉에만 있는 재미</h2>
+        <div class="
+        text-gray-200 text-center 
+        text-xs md:text-base xl:text-3xl
+        "
+        aria-describedby="original-content-title"
+        >오리지널 콘텐츠를 만나보세요!</div>
+        <div class="
+        text-gray-200 text-center 
+        text-xs xl:text-xl
+        "
+        aria-describedby="original-content-title"
+        >차별화된 웰메이드 오리지널 콘텐츠</div>
+    </div>
+    <div class="flex justify-center items-center relative mb-28 
+    "
+    aria-label="랜딩페이지 썸네일 이미지 캐러셀"
+    >
+        <!-- 모바일에서 보여줄 이미지 -->
+        <img class="max-md: w-[17.313rem] h-[25rem] md:hidden"  src="/src/assets/study_group_400.webp">
+
+        <!-- 태블릿, 데스크탑에서 보여줄 이미지 셋 -->
+        <!-- 왼쪽 이미지 -->
+        <div class="relative w-[40%] max-md:hidden ">
+          <img 
+            src="/src/assets/kim_seong_geun's_winter-vacation_1024_webp.webp" 
+            class="w-full h-full " 
+          />
+          <div class="absolute inset-0 bg-black opacity-70"></div>
+        </div>
+        <!-- 가운데 이미지 -->
+        <div class="absolute left-1/2 -translate-x-1/2 w-[50%] z-10 max-md:hidden ">
+          <img
+            src="/src/assets/studygroup_1024.webp"
+            class="w-full h-full"
+          />
+        </div>
+      
+        <!-- 오른쪽 이미지 -->
+        <div class="relative w-[40%] max-md:hidden  ">
+          <img 
+            src="/src/assets/the_scandal_of_chunhwa_1024.webp" 
+            class="w-full h-full " 
+          />
+          <div class="absolute inset-0 bg-black opacity-70"></div>
+        </div>
+      </div>
+</section>
+
+
+<!-- 랜딩페이지 내가찾던재미 섹션 -->
+<section>
+    <div class="pb-10">
+        <h2 class="
+        text-white text-center font-bold 
+        text-xl
+        md:text-3xl
+        xl:text-5xl
+        ">내가 찾던 재미 </h2>
+        <div class="
+        text-gray-200 text-center 
+        text-xs md:text-base xl:text-3xl
+        ">보고 싶은 콘텐츠를 발견하세요!</div>
+        <div class="
+        max-md:hidden
+        text-gray-200 text-center 
+        text-xs xl:text-xl
+        ">최신, 인기 TV프로그램, 영화, 해외시리즈, 파라마운트+ 오리지널 및 독점 </div>
+    </div>
+    <div class="grid gap-1">
+        <div class="flex gap-3  first-row animate-scrollslow">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+          src="/src/assets/you_quiz_on_the_block_1024.webp" alt="Image 1">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/kim_seong_geun's_winter-vacation_1024_webp.webp" alt="Image 2">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/undercover_high_school_1024.webp" alt="Image 3">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/the_scandal_of_chunhwa_1024.webp" alt="Image 4">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/chef&my_fridge_1024.webp" alt="Image 5">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/you_quiz_on_the_block_1024.webp" alt="Image 1">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+            src="/src/assets/kim_seong_geun's_winter-vacation_1024_webp.webp" alt="Image 2">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+            src="/src/assets/undercover_high_school_1024.webp" alt="Image 3">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/the_scandal_of_chunhwa_1024.webp" alt="Image 4">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+            src="/src/assets/chef&my_fridge_1024.webp" alt="Image 5">
+        </div>
+        <div class="flex gap-3 second-row animate-scrollfast">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/ssuljun_1024.webp" alt="Image 6">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/studygroup_1024.webp" alt="Image 7">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/transitlove_1024.webp" alt="Image 8">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/jijigotravel_1024.webp" alt="Image 9">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/myfan_1024.webp" alt="Image 10">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/ssuljun_1024.webp" alt="Image 6">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/studygroup_1024.webp" alt="Image 7">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+            src="/src/assets/transitlove_1024.webp" alt="Image 8">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/jijigotravel_1024.webp" alt="Image 9">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/myfan_1024.webp" alt="Image 10">
+          </div>
+      </div>
+</section>
+
+<!-- 지금 방영중인 컨텐츠, 최강야구 스핀오프, 인기 애니메이션,   티빙 오리지널 및 인기 라이브 채널 이미지 시안 필요 -->
+<section>
+
+
+
+</section>
+
+
+  </body>
+  </html>

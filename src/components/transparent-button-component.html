@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAING-투명 버튼 및 프로필 잠금 편집 표시 컴포넌트</title>
+    <link rel="icon" href="/vite.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- <script type="module" src="/src/main.js"></script> -->
+  </head>
+  <body class="bg-(--gray-800) p-3">
+    <!-- 자세히 보기 버튼 반응형 -->
+    <button class="h-[2.3125rem] md:w-[8rem] md:h-[2.75rem] xl:w-[13.8125rem] xl:h-[4.875rem] 
+                  px-2 text-sm xl:text-xl
+                text-white bg-transparent 
+                  border border-(--gray-300) rounded-sm hover:border-white">자세히보기</button>
+    <br /><br />
+
+    <!-- 왼쪽(>) 버튼 반응형 -->
+    <button>
+      <!-- 모바일 -->
+      <svg class="block md:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.7">
+          <path d="M8.826 3.34766L5.17383 6.99983" stroke="#898989" stroke-width="0.7" stroke-linecap="square"/>
+          <path d="M5.17383 7L8.826 10.6522" stroke="#898989" stroke-width="0.7" stroke-linecap="square"/>
+        </g>
+      </svg>
+      <!-- 테블릿 -->
+      <svg class="hidden md:block xl:hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_158_6414)">
+          <g opacity="0.7">
+            <path d="M25.217 9.56543L14.7822 20.0002" stroke="#898989" stroke-width="2" stroke-linecap="square"/>
+            <path d="M14.7822 20L25.217 30.4348" stroke="#898989" stroke-width="2" stroke-linecap="square"/>
+          </g>
+        </g>
+        <defs>
+          <clipPath id="clip0_158_6414">
+            <rect width="40" height="40" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+      <!-- 데스크탑 -->
+      <svg class="hidden xl:block" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_158_6408)">
+          <g opacity="0.7">
+            <path d="M44.13 16.7393L25.8691 35.0001" stroke="#898989" stroke-width="2" stroke-linecap="square"/>
+            <path d="M25.8691 35L44.13 53.2609" stroke="#898989" stroke-width="2" stroke-linecap="square"/>
+          </g>
+        </g>
+        <defs>
+          <clipPath id="clip0_158_6408">
+            <rect width="70" height="70" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </button>
+    
+    <!-- 오른쪽(>) 버튼 반응형 -->
+    <button>
+      <!-- 모바일 -->
+      <svg class="block md:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_158_6426)">
+        <path d="M5.17383 3.34766L8.826 6.99983" stroke="#898989" stroke-width="0.7" stroke-linecap="square"/>
+        <path d="M8.826 7L5.17383 10.6522" stroke="#898989" stroke-width="0.7" stroke-linecap="square"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_158_6426">
+        <rect width="14" height="14" fill="white"/>
+        </clipPath>
+        </defs>
+      </svg>
+      <!-- 테블릿 -->
+      <svg class="hidden md:block xl:hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_158_6420)">
+        <path d="M14.7822 9.56445L25.217 19.9992" stroke="#898989" stroke-width="2" stroke-linecap="square"/>
+        <path d="M25.217 19.999L14.7822 30.4338" stroke="#898989" stroke-width="2" stroke-linecap="square"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_158_6420">
+        <rect width="40" height="40" fill="white"/>
+        </clipPath>
+        </defs>
+      </svg>
+      <!-- 데스크 탑 -->
+      <svg class="hidden xl:block" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_158_6402)">
+        <path d="M25.8691 16.7373L44.13 34.9982" stroke="#898989" stroke-width="2" stroke-linecap="square"/>
+        <path d="M44.13 34.998L25.8691 53.2589" stroke="#898989" stroke-width="2" stroke-linecap="square"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_158_6402">
+        <rect width="70" height="70" fill="white"/>
+        </clipPath>
+        </defs>
+      </svg>
+    </button>
+
+    <br /><br />
+     
+    <!-- 일시정지 재생 넘기기 버튼 -->
+    <!-- 모바일 기준 -->
+    <div class="flex gap-x-2 items-center">
+      <label for="toggle1" class="cursor-pointer">
+      <input type="checkbox" id="toggle1" class="hidden peer" />
+        <!-- 일시정지 버튼 (sm) -->
+        <svg class="md:hidden xl:hidden peer-checked:hidden" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="2" height="6" fill="white"/>
+          <rect x="5" y="1" width="2" height="6" fill="white"/>
+        </svg>
+        <!-- 재생 버튼 (sm) -->
+        <svg class="min-sm:hidden md:hidden xl:hidden peer-checked:block" width="8" height="8" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_158_6399)">
+            <path d="M16 9.5L3.25 16.8612L3.25 2.13878L16 9.5Z" fill="white"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_158_6399">
+              <rect width="18" height="18" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </label>
+
+      <!-- 테블릿 기준 -->
+      <label for="toggle2" class="cursor-pointer">
+      <input type="checkbox" id="toggle2" class="hidden peer" />
+        <!-- 일시정지 버튼 md -->
+        <svg class="mr-3 max-md:hidden md:block xl:hidden peer-checked:hidden" id="pause-icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" width="3" height="10" fill="white"/>
+          <rect x="6" width="3" height="10" fill="white"/>
+        </svg>
+        <!-- 재생 버튼 (md) -->
+        <svg class="mr-3 hidden xl:hidden peer-checked:block" width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_158_6399)">
+            <path d="M16 9.5L3.25 16.8612L3.25 2.13878L16 9.5Z" fill="white"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_158_6399">
+              <rect width="18" height="18" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </label>
+
+      <!-- 데스크탑 기준 -->
+      <label for="toggle3" class="cursor-pointer">
+      <input type="checkbox" id="toggle3" class="hidden peer" />
+        <!-- 일시정지 버튼 xl -->
+        <svg class="mr-5 hidden xl:block peer-checked:hidden" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="1" width="5" height="16" fill="white"/>
+          <rect x="11" y="1" width="5" height="16" fill="white"/>
+        </svg>
+        <!-- 재생버튼 xl -->
+        <svg class="mr-5 hidden peer-checked:block" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_158_6399)">
+          <path d="M16 9.5L3.25 16.8612L3.25 2.13878L16 9.5Z" fill="white"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_158_6399">
+          <rect width="18" height="18" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+      </label>
+        
+      <label>
+        <input type="radio" name="circle" class="hidden peer/circle1" />
+        <svg class="md:hidden xl:hidden peer-checked/circle1:fill-white fill-(--gray-400)" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="3" cy="3" r="3" />
+        </svg>
+        <svg class="hidden md:block xl:hidden peer-checked/circle1:fill-white fill-(--gray-400)" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="4" cy="4" r="4"/>
+        </svg>
+        <svg class="hidden md:hidden xl:block peer-checked/circle1:fill-white fill-(--gray-400)" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="6"/>
+        </svg>
+      </label>
+    
+      <label>
+        <input type="radio" name="circle" class="hidden peer/circle2" />
+        <svg class="md:hidden xl:hidden peer-checked/circle2:fill-white fill-(--gray-400)" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="3" cy="3" r="3" />
+        </svg>
+        <svg class="hidden md:block xl:hidden peer-checked/circle2:fill-white fill-(--gray-400)" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="4" cy="4" r="4"/>
+        </svg>
+        <svg class="hidden md:hidden xl:block peer-checked/circle2:fill-white fill-(--gray-400)" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="6"/>
+        </svg>
+      </label>
+    
+      <label>
+        <input type="radio" name="circle" class="hidden peer/circle3" />
+        <svg class="md:hidden xl:hidden peer-checked/circle3:fill-white fill-(--gray-400)" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="3" cy="3" r="3" />
+        </svg>
+        <svg class="hidden md:block xl:hidden peer-checked/circle3:fill-white fill-(--gray-400)" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="4" cy="4" r="4"/>
+        </svg>
+        <svg class="hidden md:hidden xl:block peer-checked/circle3:fill-white fill-(--gray-400)" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="6"/>
+        </svg>
+      </label>
+    
+      <label>
+        <input type="radio" name="circle" class="hidden peer/circle4"/>
+        <svg class="w-[.5rem] md:hidden xl:hidden peer-checked/circle4:fill-white fill-(--gray-400)" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="3" cy="3" r="3" />
+        </svg>
+        <svg class="hidden md:block xl:hidden peer-checked/circle4:fill-white fill-(--gray-400)" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="4" cy="4" r="4"/>
+        </svg>
+        <svg class="hidden md:hidden xl:block peer-checked/circle4:fill-white fill-(--gray-400)" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="6"/>
+        </svg>
+      </label>
+    </div>
+    
+  </body>
+</html>

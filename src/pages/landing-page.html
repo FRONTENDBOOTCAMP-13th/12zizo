@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAING</title>
+    <link rel="icon" href="/vite.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', () => {
+        // DOM 선택 부분
+        const closeDialogButton = document.querySelector('.close-dialog');
+        const dialog = document.querySelector('.panel-dialog');
+        
+        // 함수 구현 부분
+        const closeDialog = () => dialog.close();
+        
+        // 페이지 로드 시 자동으로 모달 표시
+        dialog.showModal();
+    
+        // 이벤트 바인딩 부분
+        closeDialogButton.addEventListener('click', closeDialog);
+
+      });
+    </script>
+    <!-- <script type="module" src="/src/main.js"></script> -->
+  </head>
+  <body class="bg-black">
+    <div class="relative top-4 left-4 md:top-5.5 md:left-10 xl:top-8 z-10">
+        <a href="/">
+          <svg class="w-[2.875rem] h-[1rem] md:w-[4.8125rem] md:h-[1.5rem] xl:w-[8.25rem] xl:h-[2.125rem]" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_3300_276" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="46" height="12">
+            <path d="M0 2.24219H45.8296V13.759H0V2.24219Z" fill="white"/>
+            </mask>
+            <g mask="url(#mask0_3300_276)">
+            <path d="M30.027 8.7347L32.2591 13.3509H35.7274V2.52148H32.407V7.02952C32.4071 7.09766 32.3847 7.16384 32.3435 7.21728C32.3022 7.27071 32.2445 7.30826 32.1798 7.32379C32.115 7.33932 32.0471 7.33192 31.987 7.30281C31.9268 7.27369 31.8781 7.22457 31.8487 7.16345L29.6052 2.52148H26.1369V13.3504H29.4672V8.86809C29.4672 8.79999 29.4896 8.7339 29.5309 8.68055C29.5722 8.62721 29.6299 8.58976 29.6947 8.5743C29.7594 8.55884 29.8273 8.56627 29.8873 8.5954C29.9474 8.62452 29.9961 8.67362 30.0255 8.7347" fill="white"/>
+            <path d="M21.0006 2.52148H24.6424V13.3504H21.0006V2.52148Z" fill="white"/>
+            <path d="M36.8037 6.9103V8.90637C36.8037 10.8478 37.5182 12.2514 38.927 13.0774C41.1747 14.3958 44.4114 13.5821 45.8301 12.5069V7.46744H42.5411V10.6367L42.4784 10.6619C42.2171 10.7658 41.9365 10.8084 41.6571 10.7866C41.3777 10.7648 41.1066 10.6792 40.8637 10.536C40.635 10.347 40.4564 10.1022 40.344 9.82399C40.2317 9.54582 40.1893 9.2432 40.2207 8.94387V6.71047C40.188 6.42041 40.2591 6.12802 40.4209 5.88768C40.5828 5.64735 40.8242 5.47542 41.1005 5.40387C41.401 5.3297 41.7177 5.37524 41.9867 5.53127C42.2557 5.68731 42.4569 5.9422 42.5495 6.2444L45.7355 4.49315C45.3298 3.7707 44.7363 3.17783 44.0212 2.78058C43.3062 2.38333 42.4976 2.19728 41.6854 2.24315C41.4706 2.24315 41.2615 2.25387 41.0623 2.27208C39.9854 2.33803 38.9577 2.75704 38.1309 3.46726C37.6831 3.911 37.3332 4.44786 37.1047 5.04174C36.8762 5.63562 36.7745 6.27276 36.8063 6.9103" fill="white"/>
+            <path d="M9.03639 2.52148H0V5.69184H2.71818V13.3526H6.31298V5.69184H9.03377L9.03639 2.52148Z" fill="white"/>
+            <path d="M13.2072 13.4721L15.4842 6.22123C15.5054 6.15238 15.5499 6.09358 15.6098 6.05553C15.6696 6.01747 15.7408 6.00267 15.8104 6.01383C15.88 6.02498 15.9434 6.06134 15.989 6.1163C16.0347 6.17126 16.0596 6.24119 16.0592 6.31337L16.0592 13.4727L19.5124 13.4727L19.5124 2.64319L12.983 2.64319L9.4091 13.4721L13.2072 13.4721Z" fill="white"/>
+            </g>
+          </svg>
+        </a>
+      </div>
+      <!-- 분리해야지 텍스트가 하얀색으로 정상적으로 나옴-->
+      <div class="relative w-full aspect-[2048/1359] max-h-[70vh] overflow-hidden mt-8 md:mt-12 xl:mt-16">
+        <!-- 배경 이미지 (opacity 적용)  -->
+        <div class="absolute inset-0 bg-[url('/src/assets/main_cover.webp')] bg-center bg-cover bg-black opacity-30"></div>
+        <!-- 텍스트 컨테이너 (opacity 없음) -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center h-full">
+            <div class="    text-white text-center font-bold 
+            text-base md:text-xl xl:text-5xl">타잉 오리지널부터</div>
+            <div class="    text-white text-center font-bold 
+            text-base md:text-xl xl:text-5xl">드라마, 예능, 영화, 스포츠까지!</div>
+            <div class="    text-white text-center font-bold 
+            text-base md:text-xl xl:text-5xl">무제한으로 스트리밍해 보세요.</div>
+            <div class="login-button mt-4">
+               
+                <button class="
+                flex items-center justify-center
+                w-[11.75rem] md:w-[17.688rem] xl:w-[31.625rem] h-[2.125rem] md:h-[2.688rem] xl:h-[5rem] 
+                bg-[var(--brand-blue-1)] hover:bg-[var(--brand-blue-3)] 
+                text-xs md:text-base xl:text-xl text-white font-semibold" onclick="location.href='/src/pages/login-page.html'" type="button">
+                <svg class="
+                    place-items-start mr-2
+                    w-[1.125rem] h-[1.125rem] md:w-[1.25rem] md:h-[1.25rem] xl:w-[1.875rem] xl:h-[2.0625rem]" 
+                    viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_159_10883)">
+                    <path d="M37.4194 0H2.58065C1.15539 0 0 1.15539 0 2.58065V37.4194C0 38.8446 1.15539 40 2.58065 40H37.4194C38.8446 40 40 38.8446 40 37.4194V2.58065C40 1.15539 38.8446 0 37.4194 0Z" fill="none"/>
+                    <path d="M3.22583 14.1937V6.4518C3.22583 6.09549 3.51468 5.80664 3.87099 5.80664H20.6452C21.0015 5.80664 21.2903 6.09549 21.2903 6.4518V11.2905L24.0118 6.14994C24.1236 5.93874 24.3431 5.80664 24.582 5.80664H37.1543C37.599 5.80664 37.9103 6.24594 37.763 6.66548L27.5709 35.6977C27.4801 35.9563 27.236 36.1292 26.9621 36.1292H9.67744C9.32112 36.1292 9.03228 35.8404 9.03228 35.4841V15.4841C9.03228 15.1277 8.74344 14.8389 8.38712 14.8389H3.87099C3.51468 14.8389 3.22583 14.5501 3.22583 14.1937Z" fill="#000000"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9677 21.8954C20.5275 22.6888 19.6813 23.2257 18.7097 23.2257C17.2844 23.2257 16.129 22.0703 16.129 20.6451C16.129 19.2199 17.2844 18.0645 18.7097 18.0645C19.6813 18.0645 20.5275 18.6014 20.9677 19.3948C21.408 18.6014 22.2542 18.0645 23.2258 18.0645C24.651 18.0645 25.8064 19.2199 25.8064 20.6451C25.8064 22.0703 24.651 23.2257 23.2258 23.2257C22.2542 23.2257 21.408 22.6888 20.9677 21.8954Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7096 21.9361C19.4223 21.9361 20 21.3584 20 20.6458C20 19.9331 19.4223 19.3555 18.7096 19.3555C17.997 19.3555 17.4193 19.9331 17.4193 20.6458C17.4193 21.3584 17.997 21.9361 18.7096 21.9361ZM23.2258 21.9361C23.9384 21.9361 24.5161 21.3584 24.5161 20.6458C24.5161 19.9331 23.9384 19.3555 23.2258 19.3555C22.5131 19.3555 21.9354 19.9331 21.9354 20.6458C21.9354 21.3584 22.5131 21.9361 23.2258 21.9361Z" fill="#030303"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.3549 26.673C20.0675 26.673 20.6452 26.0953 20.6452 25.3827C20.6452 25.3075 20.6388 25.2338 20.6264 25.1621L18.3155 25.3065C18.2233 25.3123 18.1391 25.336 18.0646 25.3733C18.0646 25.3765 18.0646 25.3796 18.0646 25.3827C18.0646 26.0953 18.6423 26.673 19.3549 26.673Z" fill="white"/>
+                    <path d="M17.071 25.4609L24.8149 24.8652" stroke="black" stroke-linecap="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.742 23.5491C27.742 23.7273 27.5975 23.8717 27.4194 23.8717C27.2413 23.8717 27.0968 23.7273 27.0968 23.5491C27.0968 23.371 27.2413 23.2266 27.4194 23.2266C27.5975 23.2266 27.742 23.371 27.742 23.5491ZM29.6774 23.5491C29.6774 23.7273 29.533 23.8717 29.3549 23.8717C29.1767 23.8717 29.0323 23.7273 29.0323 23.5491C29.0323 23.371 29.1767 23.2266 29.3549 23.2266C29.533 23.2266 29.6774 23.371 29.6774 23.5491ZM28.0645 25.162C28.2427 25.162 28.3871 25.0176 28.3871 24.8395C28.3871 24.6613 28.2427 24.5169 28.0645 24.5169C27.8864 24.5169 27.742 24.6613 27.742 24.8395C27.742 25.0176 27.8864 25.162 28.0645 25.162Z" fill="#FF305B"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6129 23.5491C11.6129 23.7273 11.7574 23.8717 11.9355 23.8717C12.1136 23.8717 12.2581 23.7273 12.2581 23.5491C12.2581 23.371 12.1136 23.2266 11.9355 23.2266C11.7574 23.2266 11.6129 23.371 11.6129 23.5491ZM13.5484 23.5491C13.5484 23.7273 13.6929 23.8717 13.871 23.8717C14.0491 23.8717 14.1936 23.7273 14.1936 23.5491C14.1936 23.371 14.0491 23.2266 13.871 23.2266C13.6929 23.2266 13.5484 23.371 13.5484 23.5491ZM13.2258 25.162C13.0477 25.162 12.9032 25.0176 12.9032 24.8395C12.9032 24.6613 13.0477 24.5169 13.2258 24.5169C13.4039 24.5169 13.5484 24.6613 13.5484 24.8395C13.5484 25.0176 13.4039 25.162 13.2258 25.162Z" fill="#FF305B"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_159_10883">
+                    <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                새로워진 타잉을 만나보세요</button>
+            </div>
+        </div>
+      </div>
+
+
+   <section class="mt-12 md:mt-16 xl:mt-20" aria-labelledby="original-content-title">
+    <div class="
+    mb-2 md:mb-4 xl:mb-6
+    max-md:pb-4 pb-16 xl:pb-24 ">
+        <h2
+        id="original-content-title" 
+        class="
+        mb-2 md:mb-4 xl:mb-6
+        text-white text-center font-bold 
+        text-xl md:text-3xl xl:text-5xl
+        ">타잉에만 있는 재미</h2>
+        <div class="
+        text-gray-200 text-center 
+        text-xs md:text-base xl:text-3xl
+        "
+        aria-describedby="original-content-title"
+        >오리지널 콘텐츠를 만나보세요!</div>
+        <div class="
+        text-gray-200 text-center 
+        text-xs xl:text-xl
+        "
+        aria-describedby="original-content-title"
+        >차별화된 웰메이드 오리지널 콘텐츠</div>
+    </div>
+    <div class="flex justify-center items-center relative mb-28 "
+    aria-label="랜딩페이지 썸네일 이미지 캐러셀">
+        <!-- 모바일에서 보여줄 이미지 -->
+        <img class="max-md: w-[17.313rem] h-[25rem] md:hidden" 
+             src="/src/assets/study_group_400.webp"
+             alt="스터디 그룹" 
+             >
+
+        <!-- 태블릿, 데스크탑에서 보여줄 이미지 셋 -->
+        <!-- 왼쪽 이미지 -->
+        <div class="relative w-[40%] max-md:hidden ">
+          <img 
+            class="w-full h-full"
+            src="/src/assets/kim_seong_geun's_winter-vacation_1024_webp.webp" 
+            alt="김성근의 겨울방학" 
+          />
+          <div class="absolute inset-0 bg-black opacity-70"></div>
+        </div>
+        <!-- 가운데 이미지 -->
+        <div class="absolute left-1/2 -translate-x-1/2 w-[50%] z-10 max-md:hidden ">
+          <img
+            class="w-full h-full"
+            src="/src/assets/studygroup_1024.webp"
+            alt="스터디 그룹" 
+          />
+        </div>
+      
+        <!-- 오른쪽 이미지 -->
+        <div class="relative w-[40%] max-md:hidden  ">
+          <img 
+            class="w-full h-full " 
+            src="/src/assets/the_scandal_of_chunhwa_1024.webp" 
+            alt="춘화연애담" 
+          />
+          <div class="absolute inset-0 bg-black opacity-70"></div>
+        </div>
+      </div>
+</section>
+
+
+
+<section class="mt-12 md:mt-16 xl:mt-20 overflow-x-hidden" aria-labelledby="content-discovery-title">
+    <div class="pb-8">
+        <h2 
+        id="content-discovery-title"
+        class="
+        mb-2 md:mb-4 xl:mb-6
+        text-white text-center font-bold 
+        text-xl
+        md:text-3xl
+        xl:text-5xl
+        ">내가 찾던 재미 </h2>
+        <div class="
+        text-gray-200 text-center 
+        text-xs md:text-base xl:text-3xl
+        ">보고 싶은 콘텐츠를 발견하세요!</div>
+        <div class="
+        max-md:hidden
+        text-gray-200 text-center 
+        text-xs xl:text-xl
+        ">최신, 인기 TV프로그램, 영화, 해외시리즈, 파라마운트+ 오리지널 및 독점 </div>
+    </div>
+    <div class="grid gap-1" aria-label="자동 스크롤 이미지 캐러셀">
+        <div class="flex gap-3  first-row animate-scrollslow">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+          src="/src/assets/you_quiz_on_the_block_1024.webp" alt="Image 1">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/kim_seong_geun's_winter-vacation_1024_webp.webp" alt="Image 2">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/undercover_high_school_1024.webp" alt="Image 3">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/the_scandal_of_chunhwa_1024.webp" alt="Image 4">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/chef&my_fridge_1024.webp" alt="Image 5">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/you_quiz_on_the_block_1024.webp" alt="Image 1">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+            src="/src/assets/kim_seong_geun's_winter-vacation_1024_webp.webp" alt="Image 2">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+            src="/src/assets/undercover_high_school_1024.webp" alt="Image 3">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/the_scandal_of_chunhwa_1024.webp" alt="Image 4">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+            src="/src/assets/chef&my_fridge_1024.webp" alt="Image 5">
+        </div>
+        <div class="flex gap-3 second-row animate-scrollfast">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/ssuljun_1024.webp" alt="Image 6">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/studygroup_1024.webp" alt="Image 7">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+           src="/src/assets/transitlove_1024.webp" alt="Image 8">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/jijigotravel_1024.webp" alt="Image 9">
+          <img class="
+          w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+          h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+           src="/src/assets/myfan_1024.webp" alt="Image 10">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/ssuljun_1024.webp" alt="Image 6">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/studygroup_1024.webp" alt="Image 7">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)" 
+            src="/src/assets/transitlove_1024.webp" alt="Image 8">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/jijigotravel_1024.webp" alt="Image 9">
+           <img class="
+           w-(--scrollimage-width-small) xl:w-(--scrollimage-width-large)  
+           h-(--scrollimage-height-small:6.375rem) xl:h-(--scrollimage-height-large)"  
+            src="/src/assets/myfan_1024.webp" alt="Image 10">
+          </div>
+      </div>
+  </section>
+
+  <section  class="mt-12 md:mt-16 xl:mt-20">
+    <div class="flex flex-col justify-center items-center">
+      <div class="text-white
+      text-xs md:text-base xl:text-xl
+      ">NO.1 K-콘텐츠 플랫폼</div>
+      <svg class="
+          mb-2 md:mb-4 xl:mb-6
+          w-[6.188rem] h-[2.25rem] md:w-[8.438rem] md:h-[3.063rem] xl:w-[12.438rem] xl:h-[5.375rem]" 
+          viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <mask id="mask0_3300_276" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="46" height="12"> <path d="M0 2.24219H45.8296V13.759H0V2.24219Z" fill="white"/> </mask> <g mask="url(#mask0_3300_276)"> <path d="M30.027 8.7347L32.2591 13.3509H35.7274V2.52148H32.407V7.02952C32.4071 7.09766 32.3847 7.16384 32.3435 7.21728C32.3022 7.27071 32.2445 7.30826 32.1798 7.32379C32.115 7.33932 32.0471 7.33192 31.987 7.30281C31.9268 7.27369 31.8781 7.22457 31.8487 7.16345L29.6052 2.52148H26.1369V13.3504H29.4672V8.86809C29.4672 8.79999 29.4896 8.7339 29.5309 8.68055C29.5722 8.62721 29.6299 8.58976 29.6947 8.5743C29.7594 8.55884 29.8273 8.56627 29.8873 8.5954C29.9474 8.62452 29.9961 8.67362 30.0255 8.7347" fill="white"/> <path d="M21.0006 2.52148H24.6424V13.3504H21.0006V2.52148Z" fill="white"/> <path d="M36.8037 6.9103V8.90637C36.8037 10.8478 37.5182 12.2514 38.927 13.0774C41.1747 14.3958 44.4114 13.5821 45.8301 12.5069V7.46744H42.5411V10.6367L42.4784 10.6619C42.2171 10.7658 41.9365 10.8084 41.6571 10.7866C41.3777 10.7648 41.1066 10.6792 40.8637 10.536C40.635 10.347 40.4564 10.1022 40.344 9.82399C40.2317 9.54582 40.1893 9.2432 40.2207 8.94387V6.71047C40.188 6.42041 40.2591 6.12802 40.4209 5.88768C40.5828 5.64735 40.8242 5.47542 41.1005 5.40387C41.401 5.3297 41.7177 5.37524 41.9867 5.53127C42.2557 5.68731 42.4569 5.9422 42.5495 6.2444L45.7355 4.49315C45.3298 3.7707 44.7363 3.17783 44.0212 2.78058C43.3062 2.38333 42.4976 2.19728 41.6854 2.24315C41.4706 2.24315 41.2615 2.25387 41.0623 2.27208C39.9854 2.33803 38.9577 2.75704 38.1309 3.46726C37.6831 3.911 37.3332 4.44786 37.1047 5.04174C36.8762 5.63562 36.7745 6.27276 36.8063 6.9103" fill="white"/> <path d="M9.03639 2.52148H0V5.69184H2.71818V13.3526H6.31298V5.69184H9.03377L9.03639 2.52148Z" fill="white"/> <path d="M13.2072 13.4721L15.4842 6.22123C15.5054 6.15238 15.5499 6.09358 15.6098 6.05553C15.6696 6.01747 15.7408 6.00267 15.8104 6.01383C15.88 6.02498 15.9434 6.06134 15.989 6.1163C16.0347 6.17126 16.0596 6.24119 16.0592 6.31337L16.0592 13.4727L19.5124 13.4727L19.5124 2.64319L12.983 2.64319L9.4091 13.4721L13.2072 13.4721Z" fill="white"/> </g>
+      </svg>
+      <button class="
+        flex items-center justify-center
+        mb-40 md:mb-60 xl:mb-80
+        w-[11.75rem] md:w-[17.688rem] xl:w-[31.625rem] h-[2.125rem] md:h-[2.688rem] xl:h-[5rem] 
+        bg-[var(--brand-blue-1)] hover:bg-[var(--brand-blue-3)] 
+        text-xs md:text-base xl:text-xl text-white font-semibold" type="submit"
+        aria-label="타잉 서비스 이용하기" 
+        role="button"
+        >
+        <svg class="
+          place-items-start mr-2
+          w-[1.125rem] h-[1.125rem] md:w-[1.25rem] md:h-[1.25rem] xl:w-[1.875rem] xl:h-[2.0625rem]" 
+          viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_159_10883)"> <path d="M37.4194 0H2.58065C1.15539 0 0 1.15539 0 2.58065V37.4194C0 38.8446 1.15539 40 2.58065 40H37.4194C38.8446 40 40 38.8446 40 37.4194V2.58065C40 1.15539 38.8446 0 37.4194 0Z" fill="none"/> <path d="M3.22583 14.1937V6.4518C3.22583 6.09549 3.51468 5.80664 3.87099 5.80664H20.6452C21.0015 5.80664 21.2903 6.09549 21.2903 6.4518V11.2905L24.0118 6.14994C24.1236 5.93874 24.3431 5.80664 24.582 5.80664H37.1543C37.599 5.80664 37.9103 6.24594 37.763 6.66548L27.5709 35.6977C27.4801 35.9563 27.236 36.1292 26.9621 36.1292H9.67744C9.32112 36.1292 9.03228 35.8404 9.03228 35.4841V15.4841C9.03228 15.1277 8.74344 14.8389 8.38712 14.8389H3.87099C3.51468 14.8389 3.22583 14.5501 3.22583 14.1937Z" fill="#000000"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9677 21.8954C20.5275 22.6888 19.6813 23.2257 18.7097 23.2257C17.2844 23.2257 16.129 22.0703 16.129 20.6451C16.129 19.2199 17.2844 18.0645 18.7097 18.0645C19.6813 18.0645 20.5275 18.6014 20.9677 19.3948C21.408 18.6014 22.2542 18.0645 23.2258 18.0645C24.651 18.0645 25.8064 19.2199 25.8064 20.6451C25.8064 22.0703 24.651 23.2257 23.2258 23.2257C22.2542 23.2257 21.408 22.6888 20.9677 21.8954Z" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7096 21.9361C19.4223 21.9361 20 21.3584 20 20.6458C20 19.9331 19.4223 19.3555 18.7096 19.3555C17.997 19.3555 17.4193 19.9331 17.4193 20.6458C17.4193 21.3584 17.997 21.9361 18.7096 21.9361ZM23.2258 21.9361C23.9384 21.9361 24.5161 21.3584 24.5161 20.6458C24.5161 19.9331 23.9384 19.3555 23.2258 19.3555C22.5131 19.3555 21.9354 19.9331 21.9354 20.6458C21.9354 21.3584 22.5131 21.9361 23.2258 21.9361Z" fill="#030303"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M19.3549 26.673C20.0675 26.673 20.6452 26.0953 20.6452 25.3827C20.6452 25.3075 20.6388 25.2338 20.6264 25.1621L18.3155 25.3065C18.2233 25.3123 18.1391 25.336 18.0646 25.3733C18.0646 25.3765 18.0646 25.3796 18.0646 25.3827C18.0646 26.0953 18.6423 26.673 19.3549 26.673Z" fill="white"/> <path d="M17.071 25.4609L24.8149 24.8652" stroke="black" stroke-linecap="round"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M27.742 23.5491C27.742 23.7273 27.5975 23.8717 27.4194 23.8717C27.2413 23.8717 27.0968 23.7273 27.0968 23.5491C27.0968 23.371 27.2413 23.2266 27.4194 23.2266C27.5975 23.2266 27.742 23.371 27.742 23.5491ZM29.6774 23.5491C29.6774 23.7273 29.533 23.8717 29.3549 23.8717C29.1767 23.8717 29.0323 23.7273 29.0323 23.5491C29.0323 23.371 29.1767 23.2266 29.3549 23.2266C29.533 23.2266 29.6774 23.371 29.6774 23.5491ZM28.0645 25.162C28.2427 25.162 28.3871 25.0176 28.3871 24.8395C28.3871 24.6613 28.2427 24.5169 28.0645 24.5169C27.8864 24.5169 27.742 24.6613 27.742 24.8395C27.742 25.0176 27.8864 25.162 28.0645 25.162Z" fill="#FF305B"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6129 23.5491C11.6129 23.7273 11.7574 23.8717 11.9355 23.8717C12.1136 23.8717 12.2581 23.7273 12.2581 23.5491C12.2581 23.371 12.1136 23.2266 11.9355 23.2266C11.7574 23.2266 11.6129 23.371 11.6129 23.5491ZM13.5484 23.5491C13.5484 23.7273 13.6929 23.8717 13.871 23.8717C14.0491 23.8717 14.1936 23.7273 14.1936 23.5491C14.1936 23.371 14.0491 23.2266 13.871 23.2266C13.6929 23.2266 13.5484 23.371 13.5484 23.5491ZM13.2258 25.162C13.0477 25.162 12.9032 25.0176 12.9032 24.8395C12.9032 24.6613 13.0477 24.5169 13.2258 24.5169C13.4039 24.5169 13.5484 24.6613 13.5484 24.8395C13.5484 25.0176 13.4039 25.162 13.2258 25.162Z" fill="#FF305B"/> </g> <defs> <clipPath id="clip0_159_10883"> <rect width="40" height="40" fill="white"/> </clipPath> </defs>
+        </svg>
+        새로워진 타잉을 만나보세요
+      </button>
+    </div>
+  </section>
+    <!-- footer -->
+    <hr class="border-t border-(--gray-800)  mt-14 mx-4 md:mx-10 md:mt-17 xl:mx-16 xl:mt-32" />
+    <footer class="mx-4 mb-20 
+                  md:mx-10 md:mb-25 
+                  xl:mx-16 xl:mt-7 xl:mb-42">
+      <div
+        class="
+        flex flex-col  md:flex-row xl:flex-row
+        mb-4 mt-4
+        gap-1 md:gap-5  xl:gap-9">
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/" tabindex="7">고객센터</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/" tabindex="8">이용약관</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/" tabindex="9">개인정보처리방침</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/" tabindex="10">청소년 보호정책</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/" tabindex="11">법적고지</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/" tabindex="12">이벤트</a></span>
+        <span class="text-gray-200 text-xs xl:text-xl"><a href="/" tabindex="13">인재채용</a></span>
+      </div>
+      <section class="max-md:hidden mb-4 text-(--gray-500)  
+                      md:text-xs xl:text-xl ">
+        <div>
+          대표이사 : YANG JIEUL | <u tabindex="14"><a href="/">사업자정보확인</a></u> | 사업자등록번호 :
+          188-88-01893 | 통신판매신고번호 : 2020-서울마포-3641호
+        </div>
+        <div>
+          사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동) |
+          호스팅사업자 : 씨제이올리브네트웍스(주)
+        </div>
+        <div>
+          <u tabindex="15"><a href="/">고객문의 바로가기</a></u> | <u tabindex="16">대표메일 : tving@cj.net</u> |
+          <u tabindex="17"> 고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</u>
+        </div>
+        <div>
+          ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780 | Mnet
+          고객센터(반송편성문의) : 1855-1631
+        </div>
+      </section>
+      <div class="flex gap-2 mb-4 md:relative md:right-8 xl:relative xl:right-16">
+        <!-- 모바일용 svg(24px) -->
+        <a href="https://www.youtube.com/">
+          <svg
+            class="md:hidden xl:hidden"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="18"
+          >
+            <rect width="24" height="24" rx="12" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_4652)">
+              <path
+                d="M18.9191 8.43246C18.753 7.79288 18.2636 7.28918 17.6423 7.11824C16.5162 6.80762 12.0003 6.80762 12.0003 6.80762C12.0003 6.80762 7.48449 6.80762 6.35829 7.11824C5.73697 7.2892 5.24763 7.79288 5.08154 8.43246C4.77979 9.59172 4.77979 12.0104 4.77979 12.0104C4.77979 12.0104 4.77979 14.4291 5.08154 15.5884C5.24763 16.228 5.73697 16.7107 6.35829 16.8816C7.48449 17.1922 12.0003 17.1922 12.0003 17.1922C12.0003 17.1922 16.5161 17.1922 17.6423 16.8816C18.2636 16.7107 18.753 16.228 18.9191 15.5884C19.2208 14.4291 19.2208 12.0104 19.2208 12.0104C19.2208 12.0104 19.2208 9.59172 18.9191 8.43246ZM10.5234 14.2064V9.81442L14.2977 12.0105L10.5234 14.2064Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_4652">
+                <rect
+                  width="15.2308"
+                  height="13.8462"
+                  fill="white"
+                  transform="translate(4.38477 5.07715)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/">
+          <svg
+            class="md:hidden xl:hidden"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="19"
+          >
+            <rect width="24" height="24" rx="12" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_4655)">
+              <path
+                d="M12.0036 8.17267C9.88681 8.17267 8.17942 9.88006 8.17942 11.9968C8.17942 14.1136 9.88681 15.821 12.0036 15.821C14.1203 15.821 15.8277 14.1136 15.8277 11.9968C15.8277 9.88006 14.1203 8.17267 12.0036 8.17267ZM12.0036 14.483C10.6357 14.483 9.51737 13.3681 9.51737 11.9968C9.51737 10.6256 10.6323 9.51063 12.0036 9.51063C13.3748 9.51063 14.4898 10.6256 14.4898 11.9968C14.4898 13.3681 13.3715 14.483 12.0036 14.483ZM16.8761 8.01625C16.8761 8.51215 16.4767 8.90822 15.9842 8.90822C15.4882 8.90822 15.0922 8.50883 15.0922 8.01625C15.0922 7.52367 15.4916 7.12428 15.9842 7.12428C16.4767 7.12428 16.8761 7.52367 16.8761 8.01625ZM19.4089 8.92153C19.3523 7.72669 19.0794 6.66831 18.2041 5.79631C17.3321 4.92431 16.2737 4.65139 15.0789 4.59148C13.8474 4.52159 10.1564 4.52159 8.92495 4.59148C7.73343 4.64806 6.67505 4.92098 5.79972 5.79298C4.9244 6.66498 4.65481 7.72336 4.5949 8.9182C4.52501 10.1496 4.52501 13.8407 4.5949 15.0721C4.65148 16.267 4.9244 17.3253 5.79972 18.1973C6.67505 19.0693 7.73011 19.3423 8.92495 19.4022C10.1564 19.4721 13.8474 19.4721 15.0789 19.4022C16.2737 19.3456 17.3321 19.0727 18.2041 18.1973C19.0761 17.3253 19.349 16.267 19.4089 15.0721C19.4788 13.8407 19.4788 10.153 19.4089 8.92153ZM17.818 16.3934C17.5584 17.0458 17.0558 17.5483 16.4002 17.8113C15.4183 18.2007 13.0886 18.1108 12.0036 18.1108C10.9186 18.1108 8.58546 18.1973 7.60696 17.8113C6.95462 17.5517 6.45206 17.0491 6.18913 16.3934C5.79972 15.4116 5.88959 13.0818 5.88959 11.9968C5.88959 10.9118 5.80305 8.57872 6.18913 7.60021C6.44873 6.94788 6.9513 6.44531 7.60696 6.18238C8.58879 5.79298 10.9186 5.88284 12.0036 5.88284C13.0886 5.88284 15.4217 5.79631 16.4002 6.18238C17.0525 6.44199 17.5551 6.94455 17.818 7.60021C18.2074 8.58205 18.1176 10.9118 18.1176 11.9968C18.1176 13.0818 18.2074 15.4149 17.818 16.3934Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_4655">
+                <rect
+                  width="14.9105"
+                  height="17.0406"
+                  fill="white"
+                  transform="translate(4.54492 3.47949)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://x.com/">
+          <svg
+            class="md:hidden xl:hidden"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="20"
+          >
+            <rect width="24" height="24" rx="12" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_4658)">
+              <path
+                d="M17.8663 8.9914C17.8757 9.12259 17.8757 9.25381 17.8757 9.385C17.8757 13.3865 14.83 17.9973 9.26342 17.9973C7.54846 17.9973 5.95534 17.5005 4.61523 16.6384C4.8589 16.6665 5.09316 16.6759 5.3462 16.6759C6.76124 16.6759 8.06388 16.198 9.1041 15.3827C7.77337 15.3545 6.65818 14.483 6.27395 13.2835C6.46139 13.3116 6.6488 13.3303 6.84562 13.3303C7.11738 13.3303 7.38917 13.2928 7.64218 13.2273C6.25522 12.9461 5.21497 11.7278 5.21497 10.2565V10.2191C5.61793 10.444 6.08653 10.5845 6.58318 10.6033C5.76787 10.0597 5.23372 9.13196 5.23372 8.08237C5.23372 7.5201 5.38364 7.00467 5.64605 6.55485C7.1361 8.39163 9.37586 9.59114 11.8874 9.72236C11.8405 9.49744 11.8124 9.26318 11.8124 9.0289C11.8124 7.36078 13.1619 6.00195 14.8393 6.00195C15.7109 6.00195 16.498 6.36743 17.051 6.95783C17.735 6.82664 18.391 6.5736 18.9721 6.22687C18.7471 6.92973 18.2692 7.52013 17.6414 7.89495C18.2505 7.82939 18.8409 7.66066 19.3844 7.4264C18.9721 8.02615 18.4567 8.56029 17.8663 8.9914Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_4658">
+                <rect
+                  width="14.7692"
+                  height="14.7692"
+                  fill="white"
+                  transform="translate(4.61523 4.61523)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/">
+          <svg 
+            class="md:hidden xl:hidden" width="24" height="24" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" 
+            tabindex="21">
+            <rect width="52" height="52" rx="26" fill="#2B2B2B"/>
+            <g clip-path="url(#clip0_159_8312)">
+            <path d="M34.0817 28.1707L35.0462 21.8853H29.0152V17.8065C29.0152 16.0869 29.8577 14.4107 32.5588 14.4107H35.3006V9.0594C35.3006 9.0594 32.8125 8.63477 30.4336 8.63477C25.4669 8.63477 22.2204 11.6452 22.2204 17.0949V21.8853H16.6995V28.1707H22.2204V43.3652H29.0152V28.1707H34.0817Z" fill="#6B6B6B"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_159_8312">
+            <rect width="21.7065" height="34.7305" fill="white" transform="translate(15.1467 8.63477)"/>
+            </clipPath>
+            </defs>
+          </svg>
+        </a>
+          
+        <!-- 태블릿용 svg(30px) -->
+        <a href="https://www.youtube.com/">
+          <svg
+            class="max-md:hidden xl:hidden"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="18"
+          >
+            <rect width="30" height="30" rx="15" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_3637)">
+              <path
+                d="M23.6487 10.5408C23.4411 9.74135 22.8294 9.11171 22.0528 8.89804C20.6451 8.50977 15.0003 8.50977 15.0003 8.50977C15.0003 8.50977 9.35549 8.50977 7.94773 8.89804C7.17109 9.11175 6.55941 9.74135 6.35181 10.5408C5.97461 11.9899 5.97461 15.0133 5.97461 15.0133C5.97461 15.0133 5.97461 18.0366 6.35181 19.4857C6.55941 20.2852 7.17109 20.8886 7.94773 21.1023C9.35549 21.4905 15.0003 21.4905 15.0003 21.4905C15.0003 21.4905 20.645 21.4905 22.0528 21.1023C22.8294 20.8886 23.4411 20.2852 23.6487 19.4857C24.0259 18.0366 24.0259 15.0133 24.0259 15.0133C24.0259 15.0133 24.0259 11.9899 23.6487 10.5408ZM13.1541 17.7583V12.2683L17.872 15.0133L13.1541 17.7583Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_3637">
+                <rect
+                  width="19.0385"
+                  height="17.3077"
+                  fill="white"
+                  transform="translate(5.48096 6.3457)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/">
+          <svg
+            class="max-md:hidden xl:hidden"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="19"
+          >
+            <rect width="30" height="30" rx="15" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_3640)">
+              <path
+                d="M15.0041 10.2158C12.3581 10.2158 10.2239 12.3501 10.2239 14.996C10.2239 17.642 12.3581 19.7762 15.0041 19.7762C17.6501 19.7762 19.7843 17.642 19.7843 14.996C19.7843 12.3501 17.6501 10.2158 15.0041 10.2158ZM15.0041 18.1038C13.2942 18.1038 11.8963 16.7101 11.8963 14.996C11.8963 13.282 13.2901 11.8883 15.0041 11.8883C16.7181 11.8883 18.1118 13.282 18.1118 14.996C18.1118 16.7101 16.714 18.1038 15.0041 18.1038ZM21.0948 10.0203C21.0948 10.6402 20.5955 11.1353 19.9798 11.1353C19.3599 11.1353 18.8649 10.636 18.8649 10.0203C18.8649 9.40458 19.3641 8.90534 19.9798 8.90534C20.5955 8.90534 21.0948 9.40458 21.0948 10.0203ZM24.2608 11.1519C24.1901 9.65836 23.8489 8.33538 22.7547 7.24538C21.6647 6.15538 20.3418 5.81424 18.8482 5.73935C17.3089 5.65199 12.6951 5.65199 11.1558 5.73935C9.66643 5.81008 8.34345 6.15122 7.24929 7.24122C6.15513 8.33122 5.81814 9.6542 5.74326 11.1477C5.65589 12.6871 5.65589 17.3008 5.74326 18.8402C5.81398 20.3337 6.15513 21.6567 7.24929 22.7467C8.34345 23.8367 9.66227 24.1778 11.1558 24.2527C12.6951 24.3401 17.3089 24.3401 18.8482 24.2527C20.3418 24.182 21.6647 23.8408 22.7547 22.7467C23.8447 21.6567 24.1859 20.3337 24.2608 18.8402C24.3481 17.3008 24.3481 12.6912 24.2608 11.1519ZM22.2722 20.4918C21.9476 21.3072 21.3194 21.9354 20.4999 22.2641C19.2726 22.7508 16.3604 22.6385 15.0041 22.6385C13.6478 22.6385 10.7315 22.7467 9.50833 22.2641C8.69292 21.9396 8.06471 21.3114 7.73605 20.4918C7.24929 19.2645 7.36162 16.3523 7.36162 14.996C7.36162 13.6398 7.25345 10.7234 7.73605 9.50027C8.06055 8.68485 8.68875 8.05664 9.50833 7.72798C10.7356 7.24122 13.6478 7.35355 15.0041 7.35355C16.3604 7.35355 19.2767 7.24538 20.4999 7.72798C21.3153 8.05248 21.9435 8.68069 22.2722 9.50027C22.7589 10.7276 22.6466 13.6398 22.6466 14.996C22.6466 16.3523 22.7589 19.2687 22.2722 20.4918Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_3640">
+                <rect
+                  width="18.6382"
+                  height="21.3008"
+                  fill="white"
+                  transform="translate(5.68115 4.34961)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://x.com/">
+          <svg
+            class="max-md:hidden xl:hidden"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="20"
+          >
+            <rect width="30" height="30" rx="15" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_3643)">
+              <path
+                d="M22.3329 11.2397C22.3446 11.4037 22.3446 11.5677 22.3446 11.7317C22.3446 16.7337 18.5375 22.4971 11.5793 22.4971C9.43557 22.4971 7.44418 21.8762 5.76904 20.7985C6.07362 20.8336 6.36645 20.8454 6.68274 20.8454C8.45156 20.8454 10.0798 20.248 11.3801 19.2288C9.71671 19.1937 8.32272 18.1043 7.84243 16.6048C8.07674 16.6399 8.311 16.6634 8.55702 16.6634C8.89672 16.6634 9.23646 16.6165 9.55272 16.5346C7.81903 16.1831 6.51872 14.6603 6.51872 12.8212V12.7743C7.02241 13.0555 7.60817 13.2312 8.22897 13.2546C7.20984 12.5751 6.54216 11.4154 6.54216 10.1034C6.54216 9.40061 6.72955 8.75633 7.05756 8.19405C8.92013 10.49 11.7198 11.9894 14.8592 12.1534C14.8006 11.8723 14.7655 11.5795 14.7655 11.2866C14.7655 9.20146 16.4523 7.50293 18.5492 7.50293C19.6386 7.50293 20.6225 7.95978 21.3137 8.69777C22.1688 8.53378 22.9888 8.21749 23.7151 7.78407C23.4339 8.66265 22.8365 9.40065 22.0517 9.86918C22.8131 9.78722 23.5511 9.57632 24.2305 9.28349C23.7152 10.0332 23.0709 10.7009 22.3329 11.2397Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_3643">
+                <rect
+                  width="18.4615"
+                  height="18.4615"
+                  fill="white"
+                  transform="translate(5.76904 5.76953)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/">
+          <svg
+            class="max-md:hidden xl:hidden"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="21"
+          >
+            <rect width="30" height="30" rx="15" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_3646)">
+              <path
+                d="M19.6625 16.2522L20.219 12.626H16.7395V10.2728C16.7395 9.28075 17.2256 8.31374 18.7839 8.31374H20.3657V5.22643C20.3657 5.22643 18.9303 4.98145 17.5578 4.98145C14.6924 4.98145 12.8194 6.71823 12.8194 9.86229V12.626H9.63428V16.2522H12.8194V25.0183H16.7395V16.2522H19.6625Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_3646">
+                <rect
+                  width="12.523"
+                  height="20.0368"
+                  fill="white"
+                  transform="translate(8.73828 4.98145)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <!-- 데스크탑용 svg(52px) -->
+        <a href="https://www.youtube.com/">
+          <svg
+            class="max-xl:hidden"
+            width="52"
+            height="52"
+            viewBox="0 0 52 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="18"
+          >
+            <rect width="52" height="52" rx="26" fill="#2B2B2B" />
+            <path
+              d="M40.9906 18.2705C40.6307 16.8847 39.5705 15.7934 38.2243 15.423C35.7843 14.75 25.9999 14.75 25.9999 14.75C25.9999 14.75 16.2157 14.75 13.7756 15.423C12.4294 15.7934 11.3691 16.8847 11.0093 18.2705C10.3555 20.7822 10.3555 26.0227 10.3555 26.0227C10.3555 26.0227 10.3555 31.2632 11.0093 33.775C11.3691 35.1607 12.4294 36.2066 13.7756 36.577C16.2157 37.25 25.9999 37.25 25.9999 37.25C25.9999 37.25 35.7842 37.25 38.2243 36.577C39.5705 36.2066 40.6307 35.1607 40.9906 33.775C41.6444 31.2632 41.6444 26.0227 41.6444 26.0227C41.6444 26.0227 41.6444 20.7822 40.9906 18.2705ZM22.7999 30.7807V21.2647L30.9777 26.0229L22.7999 30.7807Z"
+              fill="#6B6B6B"
+            />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/">
+          <svg
+            class="max-xl:hidden"
+            width="52"
+            height="52"
+            viewBox="0 0 52 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="19"
+          >
+            <rect width="52" height="52" rx="26" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_4021)">
+              <path
+                d="M26.007 17.7068C21.4207 17.7068 17.7213 21.4061 17.7213 25.9925C17.7213 30.5788 21.4207 34.2781 26.007 34.2781C30.5933 34.2781 34.2927 30.5788 34.2927 25.9925C34.2927 21.4061 30.5933 17.7068 26.007 17.7068ZM26.007 31.3792C23.0432 31.3792 20.6202 28.9635 20.6202 25.9925C20.6202 23.0215 23.036 20.6057 26.007 20.6057C28.978 20.6057 31.3938 23.0215 31.3938 25.9925C31.3938 28.9635 28.9708 31.3792 26.007 31.3792ZM36.5642 17.3679C36.5642 18.4423 35.6989 19.3005 34.6316 19.3005C33.5571 19.3005 32.699 18.4351 32.699 17.3679C32.699 16.3006 33.5643 15.4353 34.6316 15.4353C35.6989 15.4353 36.5642 16.3006 36.5642 17.3679ZM42.0519 19.3293C41.9293 16.7405 41.338 14.4473 39.4415 12.558C37.5521 10.6687 35.259 10.0774 32.6702 9.94756C30.002 9.79613 22.0048 9.79613 19.3366 9.94756C16.755 10.0702 14.4619 10.6615 12.5653 12.5508C10.6688 14.4401 10.0847 16.7333 9.95488 19.3221C9.80345 21.9903 9.80345 29.9875 9.95488 32.6556C10.0775 35.2444 10.6688 37.5376 12.5653 39.4269C14.4619 41.3163 16.7478 41.9076 19.3366 42.0374C22.0048 42.1888 30.002 42.1888 32.6702 42.0374C35.259 41.9148 37.5521 41.3235 39.4415 39.4269C41.3308 37.5376 41.9221 35.2444 42.0519 32.6556C42.2034 29.9875 42.2034 21.9975 42.0519 19.3293ZM38.605 35.5185C38.0425 36.9319 36.9536 38.0207 35.533 38.5904C33.4057 39.4341 28.3579 39.2394 26.007 39.2394C23.6562 39.2394 18.6011 39.4269 16.481 38.5904C15.0676 38.028 13.9787 36.9391 13.409 35.5185C12.5653 33.3912 12.76 28.3433 12.76 25.9925C12.76 23.6416 12.5725 18.5866 13.409 16.4665C13.9715 15.0531 15.0604 13.9642 16.481 13.3945C18.6083 12.5508 23.6562 12.7455 26.007 12.7455C28.3579 12.7455 33.4129 12.558 35.533 13.3945C36.9464 13.957 38.0353 15.0459 38.605 16.4665C39.4487 18.5938 39.254 23.6416 39.254 25.9925C39.254 28.3433 39.4487 33.3984 38.605 35.5185Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_4021">
+                <rect
+                  width="32.3062"
+                  height="36.9213"
+                  fill="white"
+                  transform="translate(9.84668 7.53906)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://x.com/">
+          <svg
+            class="max-xl:hidden"
+            width="52"
+            height="52"
+            viewBox="0 0 52 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="20"
+          >
+            <rect width="52" height="52" rx="26" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_4024)">
+              <path
+                d="M38.7106 19.482C38.7309 19.7663 38.7309 20.0506 38.7309 20.3348C38.7309 29.0048 32.132 38.9947 20.0711 38.9947C16.3553 38.9947 12.9036 37.9185 10 36.0506C10.5279 36.1114 11.0355 36.1318 11.5838 36.1318C14.6497 36.1318 17.4721 35.0963 19.7259 33.3298C16.8426 33.2688 14.4264 31.3805 13.5939 28.7815C14 28.8424 14.4061 28.883 14.8325 28.883C15.4213 28.883 16.0102 28.8018 16.5584 28.6597C13.5533 28.0505 11.2994 25.4109 11.2994 22.2231V22.1419C12.1725 22.6293 13.1878 22.9338 14.2639 22.9744C12.4974 21.7967 11.3401 19.7866 11.3401 17.5124C11.3401 16.2942 11.6649 15.1774 12.2334 14.2028C15.4619 18.1825 20.3147 20.7814 25.7563 21.0658C25.6548 20.5784 25.5938 20.0709 25.5938 19.5633C25.5938 15.949 28.5177 13.0049 32.1522 13.0049C34.0405 13.0049 35.7461 13.7968 36.9441 15.0759C38.4263 14.7917 39.8476 14.2434 41.1065 13.4922C40.6191 15.0151 39.5836 16.2943 38.2233 17.1064C39.5431 16.9643 40.8223 16.5988 41.9999 16.0912C41.1066 17.3906 39.9898 18.5479 38.7106 19.482Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_4024">
+                <rect
+                  width="32"
+                  height="32"
+                  fill="white"
+                  transform="translate(10 10)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/">
+          <svg
+            class="max-xl:hidden"
+            width="52"
+            height="52"
+            viewBox="0 0 52 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            tabindex="21"
+          >
+            <rect width="52" height="52" rx="26" fill="#2B2B2B" />
+            <g clip-path="url(#clip0_3306_4027)">
+              <path
+                d="M34.0814 28.1707L35.046 21.8853H29.015V17.8065C29.015 16.0869 29.8575 14.4107 32.5586 14.4107H35.3004V9.0594C35.3004 9.0594 32.8123 8.63477 30.4334 8.63477C25.4666 8.63477 22.2201 11.6452 22.2201 17.0949V21.8853H16.6992V28.1707H22.2201V43.3652H29.015V28.1707H34.0814Z"
+                fill="#6B6B6B"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_3306_4027">
+                <rect
+                  width="21.7065"
+                  height="34.7305"
+                  fill="white"
+                  transform="translate(15.1465 8.63477)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+      <div class=" text-(--gray-500) text-xs xl:text-xl">
+        Copyright &copy; 주식회사 티빙 All right reserved.
+      </div>
+    </footer>
+<!-- 교육용 모달 추가 -->
+<div class="mt-4">
+  <button class="show-dialog" type="button">메인 페이지로 이동</button>
+  <dialog class="panel-dialog 
+  fixed 
+  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+  w-3xs md:w-[18.4375rem] xl:w-[32.875rem] h-30 md:h-32 xl:h-52
+  border rounded-xl
+  bg-[var(--brand-dark-bg-2)]" aria-labelledby="information">
+    <div class="flex flex-col">
+      <h2 class="pt-3 md:pt-4 xl:pt-7 pb-2 md:pb-2 xl:pb-5
+      text-base md:text-lg xl:text-2xl text-white text-center" id="information">교육용 페이지 안내</h2>
+      <p class="text-xs md:text-sm xl:text-xl text-white text-center">해당 페이지는 상업용 사이트가 아닙니다.</p>
+      <div class="flex flex-1 grow-0 basis-0 items-center justify-center">
+        <button class="close-dialog flex items-center justify-center
+            w-[4.5625rem] md:w-[5.625rem] xl:w-[9.8125rem] h-10 md:h-[2.9375rem] xl:h-[4.125rem]
+            px-2.5
+            text-xs xl:text-xl text-gray-300 hover:text-white
+            cursor-pointer" type="button">확인</button>
+      </div>
+    </div>
+  </dialog>
+</div>
+  </body>
+</html>

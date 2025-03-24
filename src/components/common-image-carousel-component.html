@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAING-공통 이미지 캐러셀 컴포넌트</title>
+    <link rel="icon" href="/vite.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    
+    <!-- <script type="module" src="/src/main.js"></script> -->
+     
+  </head>
+  <body class="bg-black">
+    <h1 class="text-white">공통 이미지캐러셀 컴포넌트 생성을 위한 페이지</h1>
+    <br/>
+    <br/>
+    <h2 class="
+    mb-3
+    text-white font-bold 
+    text-xs
+    md:text-base
+    xl:text-3xl
+    ">지금 방영중인 콘텐츠
+  </h2>
+  <div class="flex flex-row gap-x-4 min-w-[500px] ">
+   <div 
+    class="
+     relative
+     w-full
+     h-auto
+     object-cover
+     max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+     md:min-w-[11.25rem] md:min-h-[16.25rem]
+     max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+    ">
+    <img src="/src/assets/the_witch_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+    <img src="/src/assets/new_icon.svg" 
+         class="absolute w-6 md:w-7 xl:w-10   
+                top-1 md:top-2 xl:top-4 
+                left-1 md:left-2 xl:left-4">
+   </div>
+   <div 
+    class="
+     relative
+     w-full
+     h-auto
+     object-cover
+     max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+     md:min-w-[11.25rem] md:min-h-[16.25rem]
+     max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+     ">
+    <img src="/src/assets/the-art-of-negotiation_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+    <img src="/src/assets/new_icon.svg" 
+         class="absolute w-6 md:w-7 xl:w-10   
+                top-1 md:top-2 xl:top-4 
+                left-1 md:left-2 xl:left-4">
+   </div>
+   <div 
+    class="
+     relative
+     w-full
+     h-auto
+     object-cover
+     max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+     md:min-w-[11.25rem] md:min-h-[16.25rem]
+     max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+     ">
+    <img src="/src/assets/chef&my_fridge_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+    <img src="/src/assets/new_icon.svg" 
+         class="absolute w-6 md:w-7 xl:w-10   
+                top-1 md:top-2 xl:top-4 
+                left-1 md:left-2 xl:left-4">
+   </div>
+   <div 
+    class="
+     relative
+     w-full
+     h-auto
+     object-cover
+     max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+     md:min-w-[11.25rem] md:min-h-[16.25rem]
+     max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+     ">
+   <img src="/src/assets/riding_life_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+   <img src="/src/assets/new_icon.svg" 
+        class="absolute w-6 md:w-7 xl:w-10   
+               top-1 md:top-2 xl:top-4 
+               left-1 md:left-2 xl:left-4">
+   </div>
+   <div 
+    class="
+     relative
+     max-md:hidden
+     w-full
+     h-auto
+     object-cover
+     max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+     md:min-w-[11.25rem] md:min-h-[16.25rem]
+     max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+     ">
+   <img src="/src/assets/undercover_high_school_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+   <img src="/src/assets/new_icon.svg" 
+        class="absolute w-6 md:w-7 xl:w-10   
+               top-1 md:top-2 xl:top-4 
+               left-1 md:left-2 xl:left-4">  
+   </div>
+   <div 
+    class="
+     relative
+     max-md:hidden 
+     w-full
+     h-auto
+     object-cover
+     max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+     md:min-w-[11.25rem] md:min-h-[16.25rem]
+     max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+     ">
+     <img src="/src/assets/the_potato_lab_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+     <img src="/src/assets/new_icon.svg" 
+          class="absolute w-6 md:w-7 xl:w-10   
+                 top-1 md:top-2 xl:top-4 
+                 left-1 md:left-2 xl:left-4">  
+   </div>
+   <div 
+    class="
+     relative
+     max-md:hidden 
+     w-full
+     h-auto
+     object-cover
+     max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+     md:min-w-[11.25rem] md:min-h-[16.25rem]
+     max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+     ">
+    <img src="/src/assets/kim_Seong_geun's_winter_vacation_2_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+    <img src="/src/assets/new_icon.svg" 
+         class="absolute w-6 md:w-7 xl:w-10   
+                top-1 md:top-2 xl:top-4 
+                left-1 md:left-2 xl:left-4">  
+   </div>
+  </div>
+ <br/>
+ <br/>
+  <section>
+    <h2 class="
+      mb-3
+      text-white font-bold 
+      text-xs
+      md:text-base
+      xl:text-3xl
+      ">인기 애니메이션
+    </h2>
+    <div class="flex flex-row gap-x-4 min-w-[500px] " class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      <div 
+       class="
+        relative
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+       ">
+       <img src="/src/assets/solo_leveling_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+       <img src="/src/assets/new_icon.svg" 
+            class="absolute w-6 md:w-7 xl:w-10   
+                   top-1 md:top-2 xl:top-4 
+                   left-1 md:left-2 xl:left-4"> 
+       <img src="/src/assets/subtitle_icon.svg" 
+            class="absolute w-6 md:w-7 xl:w-10   
+                   top-1 md:top-2 xl:top-4 
+                   right-1 md:right-2 xl:right-4"> 
+      </div>
+      <div 
+       class="
+        relative
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+       <img src="/src/assets/solo_leveling_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+       <img src="/src/assets/new_icon.svg" 
+            class="absolute w-6 md:w-7 xl:w-10   
+                   top-1 md:top-2 xl:top-4 
+                   left-1 md:left-2 xl:left-4"> 
+       <img src="/src/assets/dubbing_icon.svg" 
+            class="absolute w-6 md:w-7 xl:w-10   
+                   top-1 md:top-2 xl:top-4 
+                   right-1 md:right-2 xl:right-4"> 
+      </div>
+      <div 
+       class="
+        relative
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+      <img src="/src/assets/shangrila_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      <img src="/src/assets/new_icon.svg" 
+           class="absolute w-6 md:w-7 xl:w-10   
+                  top-1 md:top-2 xl:top-4 
+                  left-1 md:left-2 xl:left-4"> 
+      <img src="/src/assets/subtitle_icon.svg" 
+           class="absolute w-6 md:w-7 xl:w-10   
+                  top-1 md:top-2 xl:top-4 
+                  right-1 md:right-2 xl:right-4"> 
+      </div>
+      <div 
+       class="
+        relative
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+      <img src="/src/assets/a_rank_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      <img src="/src/assets/new_icon.svg" 
+           class="absolute w-6 md:w-7 xl:w-10   
+                  top-1 md:top-2 xl:top-4 
+                  left-1 md:left-2 xl:left-4"> 
+      <img src="/src/assets/subtitle_icon.svg" 
+           class="absolute w-6 md:w-7 xl:w-10   
+                  top-1 md:top-2 xl:top-4 
+                  right-1 md:right-2 xl:right-4"> 
+      </div>
+      <div 
+       class="
+        relative
+        max-md:hidden
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+      <img src="/src/assets/attack_on_titan_season3_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      <img src="/src/assets/19_icon.svg" 
+      class="absolute w-5 md:w-4.5 xl:w-6.5 
+             top-1 md:top-2 xl:top-4 
+             right-1 md:right-2 xl:right-4"> 
+      <img src="/src/assets/subtitle_icon.svg" 
+      class="absolute w-6 md:w-7 xl:w-10   
+             top-1 md:top-2 xl:top-4 
+             right-2 md:right-8 xl:right-12"> 
+      </div>
+      <div 
+       class="
+        relative
+        max-md:hidden 
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+        <img src="/src/assets/conan_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+        <img src="/src/assets/new_icon.svg" 
+        class="absolute w-6 md:w-7 xl:w-10   
+               top-1 md:top-2 xl:top-4 
+               left-1 md:left-2 xl:left-4"> 
+        <img src="/src/assets/subtitle_icon.svg" 
+        class="absolute w-6 md:w-7 xl:w-10   
+               top-1 md:top-2 xl:top-4 
+               right-1 md:right-2 xl:right-4"> 
+      </div>
+      <div 
+       class="
+        relative
+        max-md:hidden 
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+       <img src="/src/assets/jjanggu_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+       <img src="/src/assets/dubbing_icon.svg" 
+         class="absolute w-6 md:w-7 xl:w-10   
+                top-1 md:top-2 xl:top-4 
+                right-1 md:right-2 xl:right-4"> 
+      </div>
+     </div>
+  </section>
+  <br/>
+  <br/>
+   <section>
+     <h2 class="
+       mb-3
+       text-white font-bold 
+       text-xs
+       md:text-base
+       xl:text-3xl
+       ">최강야구 스핀오프 &lt;김성근의 겨울방학&gt;
+     </h2>
+     <div class="flex flex-row gap-x-4 min-w-[500px] ">
+      <div 
+       class="
+        relative
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+       ">
+       <img src="/src/assets/kim_Seong_geun's_winter_vacation_1_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      </div>
+      <div 
+       class="
+        relative
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+       <img src="/src/assets/kim_Seong_geun's_winter_vacation_2_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      </div>
+      <div 
+       class="
+        relative
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+      <img src="/src/assets/kim_Seong_geun's_winter_vacation_3_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      </div>
+      <div 
+       class="
+        relative
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+      <img src="/src/assets/kim_Seong_geun's_winter_vacation_4_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      </div>
+      <div 
+       class="
+        relative
+        max-md:hidden
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+      <img src="/src/assets/kim_Seong_geun's_winter_vacation_5_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      </div>
+      <div 
+       class="
+        relative
+        max-md:hidden 
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+        <img src="/src/assets/kim_Seong_geun's_winter_vacation_6_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      </div>
+      <div 
+       class="
+        relative
+        max-md:hidden 
+        w-full
+        h-auto
+        object-cover
+        max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+        md:min-w-[11.25rem] md:min-h-[16.25rem]
+        max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+        ">
+       <img src="/src/assets/kim_Seong_geun's_winter_vacation_7_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+      </div>
+     </div>
+   </section>
+   <br/>
+   <br/>
+    <section>
+      <h2 class="
+        mb-3
+        text-white font-bold 
+        text-xs
+        md:text-base
+        xl:text-3xl
+        ">몰입감 최고, 집중해서 보기 추천!
+      </h2>
+      <div class="flex flex-row gap-x-4 min-w-[500px] ">
+        <div 
+         class="
+          relative
+          w-full
+          h-auto
+          object-cover
+          max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+          md:min-w-[11.25rem] md:min-h-[16.25rem]
+          max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+         ">
+         <img src="/src/assets/dongjae_the_good_or_the_bastard_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+        </div>
+        <div 
+         class="
+          relative
+          w-full
+          h-auto
+          object-cover
+          max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+          md:min-w-[11.25rem] md:min-h-[16.25rem]
+          max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+          ">
+         <img src="/src/assets/exchange_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+        </div>
+        <div 
+         class="
+          relative
+          w-full
+          h-auto
+          object-cover
+          max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+          md:min-w-[11.25rem] md:min-h-[16.25rem]
+          max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+          ">
+        <img src="/src/assets/heart_pairing_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+        </div>
+        <div 
+         class="
+          relative
+          w-full
+          h-auto
+          object-cover
+          max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+          md:min-w-[11.25rem] md:min-h-[16.25rem]
+          max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+          ">
+        <img src="/src/assets/i'm_solo_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+        </div>
+        <div 
+         class="
+          relative
+          max-md:hidden
+          w-full
+          h-auto
+          object-cover
+          max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+          md:min-w-[11.25rem] md:min-h-[16.25rem]
+          max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+          ">
+        <img src="/src/assets/law_school_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+        </div>
+        <div 
+         class="
+          relative
+          max-md:hidden 
+          w-full
+          h-auto
+          object-cover
+          max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+          md:min-w-[11.25rem] md:min-h-[16.25rem]
+          max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+          ">
+          <img src="/src/assets/love_forever_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+        </div>
+        <div 
+         class="
+          relative
+          max-md:hidden 
+          w-full
+          h-auto
+          object-cover
+          max-md:w-1/4 max-xl:w-1/5  xl:w-1/7
+          md:min-w-[11.25rem] md:min-h-[16.25rem]
+          max-xl:max-w-[16.25rem] max-xl:max-h[23.5rem]
+          ">
+         <img src="/src/assets/save_me_400.webp" class="transform transition ease-in-out duration-300 hover:-translate-y-2">
+        </div>
+       </div>
+    </section>
+  </body>
+  </html>
