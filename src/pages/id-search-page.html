@@ -48,7 +48,7 @@
         mb-1">이메일로 찾기</h3>
         <p class="text-xs md:text-base xl:text-[1.75rem] text-gray-400">가입 시 등록한 이메일을 입력해주세요.</p>
       </div>
-      <form action="/src/pages/login-page.html" method="post" class="input-component">
+      <form action="/src/pages/login-page.html" data-netlify="true" method="post" class="input-component">
         <fieldset>
           <div class="input-email-component">
             <label for="useremail" class="sr-only">이메일</label>
@@ -72,7 +72,7 @@
             <button class="w-2xs md:w-[26rem] xl:w-[45.75rem] h-[2.625rem] md:h-[3.125rem] xl:h-[5.375rem]
             rounded-sm
             bg-gray-700 active:bg-gray-100 hover:bg-white 
-            text-xs md:text-base xl:text-xl text-gray-400 active:text-black hover:text-black font-semibold " type="submit" aria-label="이메일 작성 후 해당 이메일로 가입된 아이디 확인" onclick="location.href='/src/pages/main-page.html'">확인</button>
+            text-xs md:text-base xl:text-xl text-gray-400 active:text-black hover:text-black font-semibold " type="submit" aria-label="이메일 작성 후 해당 이메일로 가입된 아이디 확인">확인</button>
           </div>
         </fieldset>
       </form>
