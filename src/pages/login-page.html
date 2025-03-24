@@ -41,7 +41,7 @@
        mt-7 mb-[3.25rem] md:mb-[4.375rem] xl:mb-[8.75rem]">
       <h2 class="mb-7
       text-base md:text-[1.8125rems] xl:text-[2.375rem] font-bold text-white">TAING ID 로그인</h2>
-      <form action="/src/pages/main-page.html" data-netlify="true" method="post" class="input-component">
+      <form data-netlify="true" onsubmit="handleSubmit(event)" method="post" class="input-component" name="login-form">
         <!-- 아이디 -->
         <fieldset>
           <div class="input-id-component">
@@ -123,6 +123,7 @@
             </label>
           </div>
           <div class="mt-4">
+            <input type="hidden" name="form-name" value="login-form">
             <button class="w-2xs md:w-[26rem] xl:w-[45.75rem] h-[2.625rem] md:h-[3.125rem] xl:h-[5.375rem]
             rounded-sm
            bg-[var(--brand-blue-1)] hover:bg-[var(--brand-blue-3)]
@@ -514,5 +515,26 @@
         Copyright &copy; 주식회사 티빙 All right reserved.
       </div>
     </footer>
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(new FormData(form)).toString()
+        })
+        .then(() => {
+          // 폼 제출 성공 후 원하는 페이지로 리디렉션
+          window.location.href = "/src/pages/main-page.html";
+        })
+        .catch(error => {
+          console.error("폼 제출 오류:", error);
+          // 오류 처리 (선택 사항)
+          alert("폼 제출 중 오류가 발생했습니다. 다시 시도해주세요.");
+        });
+      }
+    </script>
   </body>
 </html>
