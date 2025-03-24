@@ -90,4 +90,4 @@ root
 ## 배포환경?
 
 - 배포 환경 : Netlify
-- 배포 URL : 
+- 배포 URL : https://taing-ui-project-12zizo.netlify.app/
