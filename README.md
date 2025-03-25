@@ -33,20 +33,20 @@
 ```html
 root
 ├── public
-│   └── font   
+│   └── font/                 # 폰트 파일, 파비콘.svg 저장
 ├── src
-|   ├── assets (svg,webp 등 이미지파일)
-│   ├── components (재사용 가능한 컴포넌트)
-│   ├── pages (구현 할 페이지)
-│   ├── md (개인별 회고)
-│   ├── main.js
-│   └── style.css
-├── .gitignore
-├── index.html
-├── package.json
-├── package-lock.json
-├── README.md
-└── vite.config.js
+│   ├── assets/               # svg, webp 같은 이미지 파일
+│   ├── components/           # 재사용 가능한 컴포넌트
+│   ├── pages/                # 구현할 페이지 파일
+│   ├── md/                   # 개인별 회고 파일
+│   ├── main.js               
+│   └── style.css             
+├── .gitignore               
+├── index.html                # HTML 진입점
+├── package.json              
+├── package-lock.json        
+├── README.md                 # 프로젝트 설명 문서
+└── vite.config.js            # Vite 설정 파일
 ```
 
 ## 프로젝트 기획
