@@ -11,7 +11,7 @@
       href="/font/woff2/PretendardVariable.woff2"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <link rel="stylesheet" href="/font/pretendardvariable.css" />
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <!-- <script type="module" src="/src/main.js"></script> -->
@@ -39,8 +39,8 @@
     </header>
     <div class="flex flex-col items-center
        mt-7 mb-[3.25rem] md:mb-[4.375rem] xl:mb-[8.75rem]">
-      <h2 class="mb-7
-      text-base md:text-[1.8125rems] xl:text-[2.375rem] font-bold text-white">타잉 회원가입</h2>
+      <h1 class="mb-7
+      text-base md:text-[1.8125rems] xl:text-[2.375rem] font-bold text-white">타잉 회원가입</h1>
       <div class="w-72 md:w-[26rem] xl:w-[45.75rem]
       mb-6
       text-white">
@@ -65,12 +65,12 @@
               required
               placeholder="아이디"
               pattern="^[a-z]{6,12}$|^[a-z0-9]{6,12}$" 
-              aria-describedby="hint-keyword error-username"
+              aria-describedby="id-hint-keyword error-username"
               />
             <!-- 힌트 메세지 -->
             <p class="hint 
              text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
-             id="hint-keyword"
+             id="id-hint-keyword"
              >영문 소문자 또는 영문 소문자, 숫자 조합 6~12 자리
             </p>
             <p class="message
@@ -98,18 +98,18 @@
               pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,15}"
               required
               placeholder="비밀번호"
-              aria-describedby="hint-keyword"
+              aria-describedby="pw-error-password"
               />
               <p class="message
                 peer-placeholder-shown:hidden
               peer-invalid:text-red-500
                 text-xs md:text-base xl:text-xl"
-                id="error-password" aria-live="polite"
+                id="pw-error-password" aria-live="polite"
                 >유효한 비밀번호를 입력해주세요.
               </p>
           </div>
           <div class="input-password-component mb-4">
-            <label for="password" class="sr-only">비밀번호 확인</label>
+            <label for="password-check" class="sr-only">비밀번호 확인</label>
             <input
               class="input-password peer
               sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
@@ -120,16 +120,16 @@
               focus:ring-[var(--gray-100)] hover:border-[var(--gray-100)]
               placeholder-[var(--gray-600)]"
               type="password"
-              id="password"
-              name="password"
+              id="password-check"
+              name="password-check"
               pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,15}"
               required
               placeholder="비밀번호 확인"
-              aria-describedby="hint-keyword error-password"
+              aria-describedby="pw-check-hint-keyword error-password"
               />
             <p class="hint 
              text-xs md:text-base xl:text-xl w-full text-[var(--gray-500)]"
-             id="hint-keyword"
+             id="pw-check-hint-keyword"
              >영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15 자리</p>
              <p class="message
               peer-placeholder-shown:hidden
@@ -140,7 +140,7 @@
             </p>
           </div>
           <div class="input-email-component">
-            <label for="username" class="sr-only">이메일</label>
+            <label for="useremail" class="sr-only">이메일</label>
             <input
               class="input-emailname
               sm:w-[18rem] md:w-[26rem] xl:w-[45.75rem] sm:h-[2.875rem] md:h-[3.375rem] xl:h-[6rem]
