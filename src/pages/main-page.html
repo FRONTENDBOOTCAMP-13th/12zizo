@@ -2,7 +2,7 @@
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>메인 페이지</title>
     <link rel="icon" href="/vite.svg" />
     <link
@@ -16,6 +16,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <!-- <script type="module" src="/src/main.js"></script> -->
     <script type="module">
+      document.addEventListener("touchstart", function() {}, true);
       document.addEventListener("DOMContentLoaded", () => {
         // DOM 선택 부분
         const showDialogButton = document.querySelector(".show-dialog");
@@ -23,6 +24,7 @@
         const dialog = document.querySelector(".panel-dialog");
         const tooltipTrigger = document.querySelector(".tooltip-trigger"); // 툴팁 트리거 요소
         const tooltip = document.getElementById("tooltip");
+        
     
         // 함수 구현 부분
         const openDialog = () => dialog.showModal();
@@ -295,7 +297,7 @@
         </div>
         <!-- 화면 오른쪽 끝에 있는 미니 아이콘 -->
         <div class="relative group">
-          <a href="/src/pages/main-page.html" class="tooltip-trigger">
+          <button type="button" class="tooltip-trigger">
             <svg class="w-[1.125rem] h-[1.125rem] md:w-[1.25rem] md:h-[1.25rem] xl:w-[1.875rem] xl:h-[2.0625rem]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_159_10883)">
             <path d="M37.4194 0H2.58065C1.15539 0 0 1.15539 0 2.58065V37.4194C0 38.8446 1.15539 40 2.58065 40H37.4194C38.8446 40 40 38.8446 40 37.4194V2.58065C40 1.15539 38.8446 0 37.4194 0Z" fill="black"/>
@@ -313,7 +315,7 @@
             </clipPath>
             </defs>
             </svg>
-          </a>
+          </button>
         <!-- tool-tip 창 -->
         <div class="absolute z-51 right-0 mt-2 p-2
             w-[9.375rem] md:w-[11.25rem] xl:w-[13.75rem]
