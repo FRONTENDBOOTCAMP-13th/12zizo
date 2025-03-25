@@ -25,6 +25,18 @@
           button.addEventListener("click", () => toggleTooltip(button));
           button.addEventListener("touchstart", () => toggleTooltip(button), { passive: true });
         });
+        // DOM 선택 부분
+        const showDialogButton = document.querySelector('.show-dialog');
+        const closeDialogButton = document.querySelector('.close-dialog');
+        const dialog = document.querySelector('.panel-dialog');
+
+        // 함수 구현 부분
+        const openDialog = () => dialog.showModal();
+        const closeDialog = () => dialog.close();
+
+        // 이벤트 바인딩 부분
+        showDialogButton.addEventListener('click', openDialog);
+        closeDialogButton.addEventListener('click', closeDialog);
     
         function toggleTooltip(button) {
           const tooltip = button.nextElementSibling; // 툴팁 div 선택
@@ -41,6 +53,7 @@
             setTimeout(() => tooltip.classList.add("hidden"), 300);
           }
         }
+        
       });
     </script>
     
