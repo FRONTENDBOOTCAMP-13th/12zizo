@@ -11,22 +11,19 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <!-- <script type="module" src="/src/main.js"></script> -->
     <script>
-      // 툴팁 토글 (이동 방지)
-      function toggleTooltip(event) {
-        const tooltip = event.target.nextElementSibling; // Tooltip is next sibling of the trigger
+      function toggleTooltip(button) {
+        const tooltip = button.nextElementSibling; // 툴팁 div 선택
+        const state = tooltip.getAttribute("data-state");
     
-        if (window.innerWidth < 768) {
-          event.preventDefault(); // 페이지 이동 방지
-          event.stopPropagation(); // 부모 요소 이벤트 방지
-    
-          // 툴팁이 보이는지 여부를 확인하고 토글
-          tooltip.classList.toggle("hidden");
+        if (state === "closed") {
+          tooltip.setAttribute("data-state", "open");
+          tooltip.classList.remove("hidden", "opacity-0", "pointer-events-none");
+        } else {
+          tooltip.setAttribute("data-state", "closed");
+          tooltip.classList.add("opacity-0", "pointer-events-none");
+          setTimeout(() => tooltip.classList.add("hidden"), 300); // 애니메이션 후 숨김
         }
       }
-    
-      // 툴팁 트리거에 클릭 이벤트 추가
-      const tooltipTrigger = document.querySelector(".tooltip-trigger");
-      tooltipTrigger.addEventListener("click", toggleTooltip);
     </script>
     
   </head>
@@ -270,7 +267,7 @@
         </div>
         <!-- 화면 오른쪽 끝에 있는 미니 아이콘 -->
         <div class="relative group">
-          <button type="button" class="tooltip-trigger">
+          <button type="button" class="tooltip-trigger" onclick="toggleTooltip(this)">
             <svg class="w-[1.125rem] h-[1.125rem] md:w-[1.25rem] md:h-[1.25rem] xl:w-[1.875rem] xl:h-[2.0625rem]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_159_10883)">
             <path d="M37.4194 0H2.58065C1.15539 0 0 1.15539 0 2.58065V37.4194C0 38.8446 1.15539 40 2.58065 40H37.4194C38.8446 40 40 38.8446 40 37.4194V2.58065C40 1.15539 38.8446 0 37.4194 0Z" fill="black"/>
@@ -290,12 +287,14 @@
             </svg>
           </button>
           <!-- tool-tip 창 -->
-          <div class="absolute z-51 right-0 mt-2 p-2
+          <div class="absolute z-50 right-0 mt-2 p-2
                       w-[9.375rem] md:w-[11.25rem] xl:w-[13.75rem]
                     bg-(--gray-800) text-white 
-                      text-sm text-center rounded-sm 
-                      md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-300
-                      hidden md:block group-focus-within:block">
+                      text-sm text-center rounded-sm
+                      hidden opacity-0 pointer-events-none 
+                      md:block md:opacity-0 md:pointer-events-none
+                      md:group-hover:opacity-100 md:group-hover:pointer-events-auto md:transition-opacity md:duration-300"
+                      data-state="closed">
             <div class="mt-3 xl:mt-4 
                         grid min-sm:grid-cols-[40px_1fr] md:grid grid-cols-[50px_1fr] 
                         grid-rows-2 place-content-center ">
